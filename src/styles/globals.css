@@ -1,0 +1,285 @@
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  --font-size: 16px;
+  --background: #050114;
+  --foreground: #f5f3ff;
+  --card: #0d0322;
+  --card-foreground: #f5f3ff;
+  --popover: #0d0322;
+  --popover-foreground: #f5f3ff;
+  --primary: #a855f7;
+  --primary-foreground: #ffffff;
+  --secondary: #c026d3;
+  --secondary-foreground: #ffffff;
+  --muted: #1a0b2e;
+  --muted-foreground: #c4b5fd;
+  --accent: #d946ef;
+  --accent-foreground: #ffffff;
+  --destructive: #ef4444;
+  --destructive-foreground: #ffffff;
+  --border: rgba(168, 85, 247, 0.3);
+  --input: transparent;
+  --input-background: #1a0b2e;
+  --switch-background: #581c87;
+  --font-weight-medium: 500;
+  --font-weight-normal: 400;
+  --ring: #c026d3;
+  --chart-1: #a855f7;
+  --chart-2: #c026d3;
+  --chart-3: #d946ef;
+  --chart-4: #e879f9;
+  --chart-5: #f0abfc;
+  --radius: 0.75rem;
+  --sidebar: #020008;
+  --sidebar-foreground: #f5f3ff;
+  --sidebar-primary: #a855f7;
+  --sidebar-primary-foreground: #ffffff;
+  --sidebar-accent: #0d0322;
+  --sidebar-accent-foreground: #f5f3ff;
+  --sidebar-border: rgba(168, 85, 247, 0.3);
+  --sidebar-ring: #c026d3;
+  --glow-primary: #a855f7;
+  --glow-secondary: #c026d3;
+  --glow-accent: #d946ef;
+}
+
+.dark {
+  --background: #000000;
+  --foreground: #ffffff;
+  --card: #0a0118;
+  --card-foreground: #ffffff;
+  --popover: #0a0118;
+  --popover-foreground: #ffffff;
+  --primary: #c026d3;
+  --primary-foreground: #ffffff;
+  --secondary: #d946ef;
+  --secondary-foreground: #ffffff;
+  --muted: #1e0f3a;
+  --muted-foreground: #e9d5ff;
+  --accent: #e879f9;
+  --accent-foreground: #ffffff;
+  --destructive: #f87171;
+  --destructive-foreground: #ffffff;
+  --border: rgba(192, 38, 211, 0.4);
+  --input: rgba(192, 38, 211, 0.3);
+  --ring: #d946ef;
+  --font-weight-medium: 500;
+  --font-weight-normal: 400;
+  --chart-1: #c026d3;
+  --chart-2: #d946ef;
+  --chart-3: #e879f9;
+  --chart-4: #f0abfc;
+  --chart-5: #fae8ff;
+  --sidebar: #000000;
+  --sidebar-foreground: #ffffff;
+  --sidebar-primary: #c026d3;
+  --sidebar-primary-foreground: #ffffff;
+  --sidebar-accent: #1e0f3a;
+  --sidebar-accent-foreground: #ffffff;
+  --sidebar-border: rgba(192, 38, 211, 0.4);
+  --sidebar-ring: #d946ef;
+  --glow-primary: #c026d3;
+  --glow-secondary: #d946ef;
+  --glow-accent: #e879f9;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-input-background: var(--input-background);
+  --color-switch-background: var(--switch-background);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(
+    --sidebar-primary-foreground
+  );
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(
+    --sidebar-accent-foreground
+  );
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/**
+ * Base typography. This is not applied to elements which have an ancestor with a Tailwind text class.
+ */
+@layer base {
+  :where(
+    :not(:has([class*=" text-"]), :not(:has([class^="text-"])))
+  ) {
+    h1 {
+      font-size: var(--text-2xl);
+      font-weight: var(--font-weight-medium);
+      line-height: 1.5;
+    }
+
+    h2 {
+      font-size: var(--text-xl);
+      font-weight: var(--font-weight-medium);
+      line-height: 1.5;
+    }
+
+    h3 {
+      font-size: var(--text-lg);
+      font-weight: var(--font-weight-medium);
+      line-height: 1.5;
+    }
+
+    h4 {
+      font-size: var(--text-base);
+      font-weight: var(--font-weight-medium);
+      line-height: 1.5;
+    }
+
+    p {
+      font-size: var(--text-base);
+      font-weight: var(--font-weight-normal);
+      line-height: 1.5;
+    }
+
+    label {
+      font-size: var(--text-base);
+      font-weight: var(--font-weight-medium);
+      line-height: 1.5;
+    }
+
+    button {
+      font-size: var(--text-base);
+      font-weight: var(--font-weight-medium);
+      line-height: 1.5;
+    }
+
+    input {
+      font-size: var(--text-base);
+      font-weight: var(--font-weight-normal);
+      line-height: 1.5;
+    }
+  }
+}
+
+html {
+  font-size: var(--font-size);
+}
+
+/* Gaming visual effects */
+@layer utilities {
+  .animated-gradient {
+    background: linear-gradient(
+      135deg,
+      #050114 0%,
+      #0d0322 25%,
+      #1a0b2e 50%,
+      #0d0322 75%,
+      #050114 100%
+    );
+    background-size: 400% 400%;
+    animation: gradient-shift 20s ease infinite;
+  }
+
+  @keyframes gradient-shift {
+    0%,
+    100% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+  }
+
+  .particle-bg {
+    position: relative;
+  }
+}
+
+/* Custom Text Selection - Purple Theme */
+::selection {
+  background: rgba(168, 85, 247, 0.4);
+  color: #ffffff;
+}
+
+::-moz-selection {
+  background: rgba(168, 85, 247, 0.4);
+  color: #ffffff;
+}
+
+/* Cursor styles */
+body {
+  cursor: default;
+}
+
+a, button, [role="button"], input[type="submit"], input[type="button"], select, label[for] {
+  cursor: pointer !important;
+}
+
+/* Scrollbar styling for WebKit (Chrome, Edge, Safari) */
+::-webkit-scrollbar {
+  width: 12px;
+  height: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(
+    180deg,
+    color-mix(in srgb, var(--primary) 85%, #0000),
+    color-mix(in srgb, var(--secondary) 65%, #0000)
+  );
+  border-radius: 999px;
+  border: 2px solid transparent; /* leave a gap */
+  background-clip: padding-box;
+}
+
+/* Hover state for thumb */
+::-webkit-scrollbar-thumb:hover {
+  filter: brightness(1.05);
+}
+
+/* Firefox scrollbar */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--primary) transparent;
+}
+
+/* Make sure selection and scrollbars also look good in dark mode by relying on CSS vars */
