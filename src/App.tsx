@@ -21,7 +21,35 @@ import {
   Globe,
   Palette,
   Download,
+  Boxes,
 } from "lucide-react";
+// Use direct asset paths for SVGs (Vite will serve them from /src)
+import UnityIcon from "./components/icons/UnityIcon";
+import UnrealIcon from "./components/icons/UnrealIcon";
+import CsharpIcon from "./components/icons/CsharpIcon";
+import CppIcon from "./components/icons/CppIcon";
+import GitIcon from "./components/icons/GitIcon";
+import GithubIcon from "./components/icons/GithubIcon";
+import BlenderIcon from "./components/icons/BlenderIcon";
+import HtmlIcon from "./components/icons/HtmlIcon";
+import CssIcon from "./components/icons/CssIcon";
+import JavascriptIcon from "./components/icons/JavascriptIcon";
+import NodeIcon from "./components/icons/NodeIcon";
+import NpmIcon from "./components/icons/NpmIcon";
+import PerforceIcon from "./components/icons/PerforceIcon";
+import PhotoshopIcon from "./components/icons/PhotoshopIcon";
+import PythonIcon from "./components/icons/PythonIcon";
+import SassIcon from "./components/icons/SassIcon";
+import VisualIcon from "./components/icons/VisualIcon";
+import VscodeIcon from "./components/icons/VscodeIcon";
+import FigmaIcon from "./components/icons/FigmaIcon";
+import DiversionIcon from "./components/icons/DiversionIcon";
+import MongoIcon from "./components/icons/MongoIcon";
+import FirebaseIcon from "./components/icons/FirebaseIcon";
+import HoudiniIcon from "./components/icons/HoudiniIcon";
+import ClionIcon from "./components/icons/ClionIcon";
+import Max3DIcon from "./components/icons/Max3DIcon";
+
 import { Button } from "./components/ui/button";
 import { motion, AnimatePresence } from "motion/react";
 import { useState } from "react";
@@ -29,6 +57,7 @@ import { useState } from "react";
 function App() {
   const [showAllGames, setShowAllGames] = useState(true);
   const [isLoading, setIsLoading] = useState(true);
+  const [topDone, setTopDone] = useState(false);
 
   // Mock game data organized by engine
   const unityGames: GameCardProps[] = [
@@ -294,6 +323,7 @@ function App() {
                     delay: 1.5,
                     ease: "easeOut"
                   }}
+                  onAnimationComplete={() => setTopDone(true)}
                 >
                   <Button size="lg" className="gap-2 cursor-pointer" asChild>
                     <a href="/resume-en.pdf" download className="cursor-pointer">
@@ -317,9 +347,12 @@ function App() {
             </section>
 
             {/* Projects Section */}
-            <section
+            <motion.section
               id="projects"
               className="container mx-auto px-4 md:px-6 lg:px-8 py-16 md:py-24 bg-muted/30 relative"
+              initial={{ opacity: 0, y: 20, pointerEvents: "none" }}
+              animate={topDone ? { opacity: 1, y: 0, pointerEvents: "auto" } : { opacity: 0, y: 20, pointerEvents: "none" }}
+              transition={{ duration: 0.6, ease: "easeOut" }}
             >
               <div className="space-y-8">
                 <motion.div
@@ -362,7 +395,7 @@ function App() {
                         onClick={() => setShowAllGames(false)}
                       >
                         <div className="flex items-center gap-2">
-                          <Code className="w-4 h-4" />
+                          <UnityIcon className="w-4 h-4" />
                           <span>Unity</span>
                         </div>
                       </TabsTrigger>
@@ -371,7 +404,7 @@ function App() {
                         onClick={() => setShowAllGames(false)}
                       >
                         <div className="flex items-center gap-2">
-                          <Cpu className="w-4 h-4" />
+                          <UnrealIcon className="w-4 h-4" />
                           <span>Unreal</span>
                         </div>
                       </TabsTrigger>
@@ -420,7 +453,7 @@ function App() {
                   </TabsContent>
                 </Tabs>
               </div>
-            </section>
+            </motion.section>
 
             {/* Game Jams Section */}
             <section
@@ -479,63 +512,63 @@ function App() {
                     {[
                       {
                         name: "Unity",
-                        icon: Code,
+                        icon: UnityIcon,
                         url: "https://unity.com",
                       },
                       {
                         name: "Unreal Engine",
-                        icon: Cpu,
+                        icon: UnrealIcon,
                         url: "https://unrealengine.com",
                       },
                       {
-                        name: "Godot",
-                        icon: Zap,
-                        url: "https://godotengine.org",
-                      },
-                      {
                         name: "C#",
-                        icon: Code,
+                        icon: CsharpIcon,
                         url: "https://learn.microsoft.com/en-us/dotnet/csharp/",
                       },
                       {
+                        name: "Blueprints",
+                        icon: Boxes,
+                        url: "https://docs.unrealengine.com/blueprints",
+                      },
+                      {
                         name: "C++",
-                        icon: Code,
+                        icon: CppIcon,
                         url: "https://cplusplus.com",
                       },
                       {
-                        name: "GDScript",
-                        icon: Code,
-                        url: "https://docs.godotengine.org",
-                      },
-                      {
                         name: "Git",
-                        icon: Github,
+                        icon: GitIcon,
                         url: "https://git-scm.com",
                       },
                       {
                         name: "GitHub",
-                        icon: Github,
+                        icon: GithubIcon,
                         url: "https://github.com",
                       },
                       {
-                        name: "Blender",
-                        icon: Code,
-                        url: "https://blender.org",
+                        name: "Diversion",
+                        icon: DiversionIcon,
+                        url: "https://diversion.dev",
                       },
                       {
-                        name: "Shader Graph",
-                        icon: Zap,
-                        url: "https://unity.com/features/shader-graph",
+                        name: "Perforce",
+                        icon: PerforceIcon,
+                        url: "https://www.perforce.com",
                       },
                       {
-                        name: "Blueprints",
-                        icon: Cpu,
-                        url: "https://docs.unrealengine.com/blueprints",
+                        name: "VS Code",
+                        icon: VscodeIcon,
+                        url: "https://code.visualstudio.com",
                       },
                       {
-                        name: "Physics",
-                        icon: Gamepad2,
-                        url: "#",
+                        name: "Visual Studio",
+                        icon: VisualIcon,
+                        url: "https://visualstudio.microsoft.com",
+                      },
+                      {
+                        name: "CLion",
+                        icon: ClionIcon,
+                        url: "https://www.jetbrains.com/clion/",
                       },
                     ].map((item, index) => (
                       <motion.a
@@ -600,7 +633,11 @@ function App() {
                           animate="rest"
                           whileHover="hover"
                         >
-                          <item.icon className="h-5 w-5 text-primary flex-shrink-0" />
+                          {typeof item.icon === "string" ? (
+                            <img src={item.icon} alt={`${item.name} logo`} className="h-5 w-5 flex-shrink-0" />
+                          ) : (
+                            <item.icon className="h-5 w-5 flex-shrink-0" />
+                          )}
                         </motion.div>
                         <span className="text-sm group-hover:text-primary transition-colors duration-300">
                           {item.name}
@@ -618,34 +655,49 @@ function App() {
                   <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 max-w-6xl mx-auto">
                     {[
                       {
-                        name: "React",
-                        icon: Code,
-                        url: "https://react.dev",
+                        name: "HTML",
+                        icon: HtmlIcon,
+                        url: "https://developer.mozilla.org/en-US/docs/Web/HTML",
                       },
                       {
-                        name: "TypeScript",
-                        icon: Code,
-                        url: "https://typescriptlang.org",
+                        name: "CSS",
+                        icon: CssIcon,
+                        url: "https://developer.mozilla.org/en-US/docs/Web/CSS",
+                      },
+                      {
+                        name: "Sass",
+                        icon: SassIcon,
+                        url: "https://sass-lang.com",
                       },
                       {
                         name: "JavaScript",
-                        icon: Code,
+                        icon: JavascriptIcon,
                         url: "https://javascript.info",
                       },
                       {
-                        name: "Tailwind CSS",
-                        icon: Palette,
-                        url: "https://tailwindcss.com",
+                        name: "NPM",
+                        icon: NpmIcon,
+                        url: "https://www.npmjs.com",
                       },
                       {
                         name: "Node.js",
-                        icon: Database,
+                        icon: NodeIcon,
                         url: "https://nodejs.org",
                       },
                       {
                         name: "Python",
-                        icon: Code,
+                        icon: PythonIcon,
                         url: "https://python.org",
+                      },
+                      {
+                        name: "MongoDB",
+                        icon: MongoIcon,
+                        url: "https://www.mongodb.com",
+                      },
+                      {
+                        name: "Firebase",
+                        icon: FirebaseIcon,
+                        url: "https://firebase.google.com",
                       },
                       {
                         name: "SQL",
@@ -653,29 +705,29 @@ function App() {
                         url: "https://www.postgresql.org",
                       },
                       {
-                        name: "REST APIs",
-                        icon: Globe,
-                        url: "https://restfulapi.net",
-                      },
-                      {
                         name: "Photoshop",
-                        icon: Palette,
+                        icon: PhotoshopIcon,
                         url: "https://www.adobe.com/products/photoshop.html",
                       },
                       {
                         name: "Figma",
-                        icon: Palette,
+                        icon: FigmaIcon,
                         url: "https://figma.com",
                       },
                       {
-                        name: "VS Code",
-                        icon: Code,
-                        url: "https://code.visualstudio.com",
+                        name: "Blender",
+                        icon: BlenderIcon,
+                        url: "https://blender.org",
                       },
                       {
-                        name: "UI/UX Design",
-                        icon: Palette,
-                        url: "#",
+                        name: "3ds Max",
+                        icon: Max3DIcon,
+                        url: "https://www.autodesk.com/products/3ds-max/overview",
+                      },
+                      {
+                        name: "Houdini",
+                        icon: HoudiniIcon,
+                        url: "https://www.sidefx.com",
                       },
                     ].map((item, index) => (
                       <motion.a
@@ -741,7 +793,7 @@ function App() {
                           whileHover="hover"
                           style={{ willChange: "transform" }}
                         >
-                          <item.icon className="h-5 w-5 text-secondary flex-shrink-0" />
+                          <item.icon className="h-5 w-5 flex-shrink-0" />
                         </motion.div>
                         <span className="text-sm group-hover:text-secondary transition-colors duration-300">
                           {item.name}
@@ -845,7 +897,6 @@ function App() {
                   ].map((item, index) => (
                     <motion.div
                       key={item.label}
-                      whileHover={{ scale: 1.1, y: -5 }}
                       whileTap={{ scale: 0.95 }}
                       initial={{ opacity: 0, y: 20 }}
                       whileInView={{ opacity: 1, y: 0 }}

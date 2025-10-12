@@ -83,10 +83,7 @@ export function GameCard({
             <CardTitle className={isHovered ? "glow-text" : ""}>
               {title}
             </CardTitle>
-            <Badge
-              variant="secondary"
-              className="transition-all duration-300 hover:scale-110"
-            >
+            <Badge variant="secondary" className="transition-all duration-300">
               {engine}
             </Badge>
           </div>
@@ -104,7 +101,6 @@ export function GameCard({
                   duration: 0.3,
                   delay: index * 0.05,
                 }}
-                whileHover={{ scale: 1.1 }}
               >
                 <Badge variant="outline">{tech}</Badge>
               </motion.div>
@@ -113,40 +109,30 @@ export function GameCard({
         </CardContent>
         <CardFooter className="gap-2">
           {demoLink && (
-            <motion.div
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-            >
-              <Button size="sm" variant="default" asChild className="cursor-pointer">
-                <a
-                  href={demoLink}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="cursor-pointer"
-                >
-                  <ExternalLink className="mr-2 h-4 w-4" />
-                  Demo
-                </a>
-              </Button>
-            </motion.div>
+            <Button size="sm" variant="default" asChild className="cursor-pointer">
+              <a
+                href={demoLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="cursor-pointer"
+              >
+                <ExternalLink className="mr-2 h-4 w-4" />
+                Demo
+              </a>
+            </Button>
           )}
           {githubLink && (
-            <motion.div
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-            >
-              <Button size="sm" variant="outline" asChild className="cursor-pointer">
-                <a
-                  href={githubLink}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="cursor-pointer"
-                >
-                  <Github className="mr-2 h-4 w-4" />
-                  Code
-                </a>
-              </Button>
-            </motion.div>
+            <Button size="sm" variant="outline" asChild className="cursor-pointer">
+              <a
+                href={githubLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="cursor-pointer"
+              >
+                <Github className="mr-2 h-4 w-4" />
+                Code
+              </a>
+            </Button>
           )}
         </CardFooter>
       </Card>
