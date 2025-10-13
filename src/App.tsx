@@ -113,38 +113,7 @@ function App() {
     },
   ];
 
-  const godotGames: GameCardProps[] = [
-    {
-      title: "Sky Runner",
-      description:
-        "2D platformer with precise movement mechanics, collectibles, and challenging level design.",
-      image:
-        "https://images.unsplash.com/photo-1758862493283-51f1e23b8883?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwbGF0Zm9ybWVyJTIwZ2FtZSUyMGFydHxlbnwxfHx8fDE3NjAwMjc4OTZ8MA&ixlib=rb-4.1.0&q=80&w=1080",
-      technologies: [
-        "GDScript",
-        "Godot 4",
-        "2D Physics",
-        "Tilemap",
-      ],
-      engine: "Godot",
-      demoLink: "#",
-      githubLink: "#",
-    },
-    {
-      title: "Block Breaker Deluxe",
-      description:
-        "Modern take on the classic puzzle game with power-ups, combo systems, and 100+ levels.",
-      image:
-        "https://images.unsplash.com/photo-1595707678349-4b3f482bfbd3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwdXp6bGUlMjBnYW1lJTIwY29sb3JmdWx8ZW58MXx8fHwxNzYwMDEyOTkwfDA&ixlib=rb-4.1.0&q=80&w=1080",
-      technologies: [
-        "GDScript",
-        "Godot 3.5",
-        "Particle System",
-      ],
-      engine: "Godot",
-      demoLink: "#",
-    },
-  ];
+  // Godot projects removed per request
 
   const gameJamGames: GameCardProps[] = [
     {
@@ -157,16 +126,6 @@ function App() {
       engine: "Unity",
       demoLink: "#",
       githubLink: "#",
-    },
-    {
-      title: "Time Loop Escape",
-      description:
-        "Global Game Jam 2024 submission. Puzzle platformer where you must use time manipulation to escape.",
-      image:
-        "https://images.unsplash.com/photo-1758862493283-51f1e23b8883?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwbGF0Zm9ybWVyJTIwZ2FtZSUyMGFydHxlbnwxfHx8fDE3NjAwMjc4OTZ8MA&ixlib=rb-4.1.0&q=80&w=1080",
-      technologies: ["Godot", "GDScript", "Shader"],
-      engine: "Godot",
-      demoLink: "#",
     },
     {
       title: "Space Debris Cleanup",
@@ -184,7 +143,6 @@ function App() {
   const allGames = [
     ...unityGames,
     ...unrealGames,
-    ...godotGames,
   ];
 
   return (
@@ -305,7 +263,7 @@ function App() {
                   }}
                 >
                   Passionate game developer specializing in
-                  Unity, Unreal Engine, and Godot. Creating
+                  Unity and Unreal Engine. Creating
                   immersive experiences from concept to
                   completion.
                 </motion.p>
@@ -380,7 +338,7 @@ function App() {
                     viewport={{ once: true }}
                     transition={{ duration: 0.6, ease: "easeOut" }}
                   >
-                    <TabsList className="grid grid-cols-4 w-full max-w-3xl gap-2 p-1.5">
+                    <TabsList className="flex w-full max-w-3xl gap-2 p-1.5 justify-center">
                       <TabsTrigger
                         value="all"
                         onClick={() => setShowAllGames(true)}
@@ -408,15 +366,6 @@ function App() {
                           <span>Unreal</span>
                         </div>
                       </TabsTrigger>
-                      <TabsTrigger
-                        value="godot"
-                        onClick={() => setShowAllGames(false)}
-                      >
-                        <div className="flex items-center gap-2">
-                          <Zap className="w-4 h-4" />
-                          <span>Godot</span>
-                        </div>
-                      </TabsTrigger>
                     </TabsList>
                   </motion.div>
 
@@ -439,14 +388,6 @@ function App() {
                   <TabsContent value="unreal" className="mt-8">
                     <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
                       {unrealGames.map((game) => (
-                        <GameCard key={game.title} {...game} />
-                      ))}
-                    </div>
-                  </TabsContent>
-
-                  <TabsContent value="godot" className="mt-8">
-                    <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-                      {godotGames.map((game) => (
                         <GameCard key={game.title} {...game} />
                       ))}
                     </div>
@@ -838,10 +779,9 @@ function App() {
                     viewport={{ once: true }}
                     transition={{ duration: 0.6, delay: 0.2 }}
                   >
-                    With experience in Unity, Unreal Engine, and
-                    Godot, I can adapt to any project's needs. I
-                    regularly participate in game jams to
-                    sharpen my skills and explore new ideas.
+                    With experience in Unity and Unreal Engine, I can adapt
+                    to any project's needs. I regularly participate in
+                    game jams to sharpen my skills and explore new ideas.
                   </motion.p>
                 </div>
               </motion.div>
