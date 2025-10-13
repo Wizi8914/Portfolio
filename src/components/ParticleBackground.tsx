@@ -21,10 +21,10 @@ export function ParticleBackground() {
       // slightly more particles for a fuller background
       baseCount: 55,
       // smaller base size
-      baseSize: 1.2,
+      baseSize: 1.5,
       sizeRandom: true,
       // reduce base opacity so particles are less visible
-      opacity: 0.28,
+      opacity: 0.5,
       link: {
         enable: true,
         // allow links across a wider area so particles can be more spread

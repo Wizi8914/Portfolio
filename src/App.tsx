@@ -49,6 +49,17 @@ import FirebaseIcon from "./components/icons/FirebaseIcon";
 import HoudiniIcon from "./components/icons/HoudiniIcon";
 import ClionIcon from "./components/icons/ClionIcon";
 import Max3DIcon from "./components/icons/Max3DIcon";
+import JavaIcon from "./components/icons/JavaIcon";
+
+import NeonPuseThumb from "./assets/thumbnails/project/Neon_Pulse_Thumbnail.png";
+import SpaceAdventureThumb from "./assets/thumbnails/project/SpaceAdventure_Thumbnail.png";
+
+import BiogenThumb from "./assets/thumbnails/project/Biogen_Thumbnail.png";
+import IndianaThumb from "./assets/thumbnails/project/Indiana_Thumbnail.png";
+import SpeedyBurgerThumb from "./assets/thumbnails/project/SpeedyBurger_Thumbnail.png";
+
+import BubblePopThumb from "./assets/thumbnails/gamejam/Bubble_Pop_Thumbnail.png";
+import TLifeThumb from "./assets/thumbnails/gamejam/TLife_Thumbnail.png";
 
 import { Button } from "./components/ui/button";
 import { motion, AnimatePresence } from "motion/react";
@@ -62,54 +73,72 @@ function App() {
   // Mock game data organized by engine
   const unityGames: GameCardProps[] = [
     {
-      title: "Mystic Realms",
+      title: "Space Adventure",
       description:
-        "A fantasy RPG adventure featuring dynamic combat, character progression, and an immersive storyline set in a magical world.",
-      image:
-        "https://images.unsplash.com/photo-1698450998458-0bc1045788a1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxmYW50YXN5JTIwZ2FtZSUyMHNjcmVlbnNob3R8ZW58MXx8fHwxNzYwMDI3ODk2fDA&ixlib=rb-4.1.0&q=80&w=1080",
+            "Space Adventure is a third-person shooter set in space. Face enemies, collect new weapons, and escape.",
+      image: SpaceAdventureThumb,
       technologies: [
         "C#",
         "Unity",
-        "Shader Graph",
+        "AI Behavior",
+        "State Machines",
         "Cinemachine",
       ],
       engine: "Unity",
       demoLink: "#",
-      githubLink: "#",
+      githubLink: "https://github.com/Wizi8914/UnityTPSGame",
     },
     {
-      title: "Velocity Shift",
+      title: "Neon Pulse",
       description:
-        "High-speed racing game with customizable vehicles, multiple tracks, and competitive multiplayer modes.",
-      image:
-        "https://images.unsplash.com/photo-1685039934357-c88f0c4aaa23?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxyYWNpbmclMjBnYW1lJTIwdHJhY2t8ZW58MXx8fHwxNzYwMDI3ODk3fDA&ixlib=rb-4.1.0&q=80&w=1080",
+        "Neon Pulse is a mobile rhythm game where you control a car in a Synthwave universe. Several music tracks are available. ",
+      image: NeonPuseThumb,
       technologies: [
         "C#",
         "Unity",
-        "Physics",
-        "Mirror Networking",
+        "Engine Editing",
       ],
       engine: "Unity",
       demoLink: "#",
+      githubLink: "https://github.com/Wizi8914/Neon-Pulse",
     },
   ];
 
   const unrealGames: GameCardProps[] = [
     {
-      title: "Neon Horizon",
-      description:
-        "Cyberpunk third-person shooter with advanced AI enemies, destructible environments, and a branching narrative.",
-      image:
-        "https://images.unsplash.com/photo-1728198349686-c51f8899d2a9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxzY2ktZmklMjBnYW1lJTIwZW52aXJvbm1lbnR8ZW58MXx8fHwxNzYwMDI3ODk2fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      title: "Speedy Burger",
+      description: "Speedy Burger is a cooperative game using a customized controller. Your goal is to complete fast food orders. Pay close attention to the orders!",
+      image: SpeedyBurgerThumb,
       technologies: [
-        "C++",
-        "Blueprints",
-        "Niagara",
-        "MetaHuman",
+        "Blueprint",
+        "Alternative Controllers",
+        "Data Table",
+        "Shaders"
       ],
       engine: "Unreal Engine 5",
       demoLink: "#",
-      githubLink: "#",
+    },
+    {
+      title: "Temple escape",
+      description: "Temple Escape is a local multiplayer game for up to 4 players that is based on the concept of a Mario Party mini-game with an Indiana Jones theme.",
+      image: IndianaThumb,
+      technologies: [
+        "Blueprint",
+        "Local Multiplayer",
+      ],
+      engine: "Unreal Engine 5",
+      demoLink: "#",
+    },
+    {
+      title: "Biogen",
+      description: "Biogen is a school project that aimed to create an advanced user interface on Unreal, with a HUD and a skill tree.",
+      image: BiogenThumb,
+      technologies: [
+        "Blueprint",
+        "Widgets",
+      ],
+      engine: "Unreal Engine 5",
+      demoLink: "#",
     },
   ];
 
@@ -117,26 +146,23 @@ function App() {
 
   const gameJamGames: GameCardProps[] = [
     {
-      title: "Pixel Quest",
+      title: "Bubble Pop",
       description:
-        "Created in 48 hours for Ludum Dare 52. A retro-style adventure game where you harvest resources to survive.",
-      image:
-        "https://images.unsplash.com/photo-1673350808686-209dc177c898?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxpbmRpZSUyMGdhbWUlMjBwaXhlbHxlbnwxfHx8fDE3NjAwMjc4OTh8MA&ixlib=rb-4.1.0&q=80&w=1080",
-      technologies: ["Unity", "C#", "Pixel Art"],
-      engine: "Unity",
-      demoLink: "#",
-      githubLink: "#",
+        "Created in 48 hours for the 2025 Global Game Jam. A horror game set in a bubble wrap factory. Your goal is to escape without getting caught by the monster. Be careful not to step on the bubble wrap!",
+      image: BubblePopThumb,
+      technologies: ["Blueprint", "AI Behavior"],
+      engine: "Unreal Engine 5",
+      demoLink: "https://globalgamejam.org/games/2025/bubble-pop-5-0",
     },
     {
-      title: "Space Debris Cleanup",
+      title: "T-Life",
       description:
-        "Mini Jam 142 entry. Strategic game about cleaning up space junk while managing fuel and resources.",
-      image:
-        "https://images.unsplash.com/photo-1728198349686-c51f8899d2a9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxzY2ktZmklMjBnYW1lJTIwZW52aXJvbm1lbnR8ZW58MXx8fHwxNzYwMDI3ODk2fDA&ixlib=rb-4.1.0&q=80&w=1080",
-      technologies: ["Unity", "C#", "2D Physics"],
+        "T-Life is a game created during the 2024 Global Game Jam. You must help a dinosaur named Gilbert accomplish everyday tasks that are difficult for him with his short arms.",
+      image: TLifeThumb,
+      technologies: ["C#", "2D"],
       engine: "Unity",
-      demoLink: "#",
-      githubLink: "#",
+      demoLink: "https://globalgamejam.org/games/2024/t-life-4",
+      githubLink: "https://github.com/Wizi8914/TLife",
     },
   ];
 
@@ -262,10 +288,7 @@ function App() {
                     ease: "easeOut"
                   }}
                 >
-                  Passionate game developer specializing in
-                  Unity and Unreal Engine. Creating
-                  immersive experiences from concept to
-                  completion.
+                  Passionate student in video game development, specializing in Unreal Engine and Unity. Creation of immersive experiences, from design to implementation.
                 </motion.p>
 
                 {/* Resume buttons */}
@@ -631,6 +654,11 @@ function App() {
                         url: "https://python.org",
                       },
                       {
+                        name: "Java",
+                        icon: JavaIcon,
+                        url: "https://www.java.com",
+                      },
+                      {
                         name: "MongoDB",
                         icon: MongoIcon,
                         url: "https://www.mongodb.com",
@@ -817,22 +845,17 @@ function App() {
                     {
                       icon: Mail,
                       label: "Email",
-                      href: "mailto:your.email@example.com",
+                      href: "mailto:loick.konieczny@gmail.com",
                     },
                     {
                       icon: Github,
                       label: "GitHub",
-                      href: "https://github.com",
+                      href: "https://github.com/Wizi8914",
                     },
                     {
                       icon: Linkedin,
                       label: "LinkedIn",
-                      href: "https://linkedin.com",
-                    },
-                    {
-                      icon: Twitter,
-                      label: "Twitter",
-                      href: "https://twitter.com",
+                      href: "https://www.linkedin.com/in/loïck-konieczny-720594291",
                     },
                   ].map((item, index) => (
                     <motion.div
@@ -867,7 +890,7 @@ function App() {
             </section>
 
             {/* Footer */}
-            <footer className="border-t py-8">
+            <footer className="border-t py-8 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
               <div className="container mx-auto px-4 md:px-6 lg:px-8 text-center text-muted-foreground">
                 <motion.p
                   initial={{ opacity: 0 }}
