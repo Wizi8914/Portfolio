@@ -51,13 +51,18 @@ import ClionIcon from "./components/icons/ClionIcon";
 import Max3DIcon from "./components/icons/Max3DIcon";
 import JavaIcon from "./components/icons/JavaIcon";
 
+// Thumbnails
+
+// Unity games
 import NeonPuseThumb from "./assets/thumbnails/project/Neon_Pulse_Thumbnail.png";
 import SpaceAdventureThumb from "./assets/thumbnails/project/SpaceAdventure_Thumbnail.png";
 
+// Unreal Engine games
 import BiogenThumb from "./assets/thumbnails/project/Biogen_Thumbnail.png";
 import IndianaThumb from "./assets/thumbnails/project/Indiana_Thumbnail.png";
 import SpeedyBurgerThumb from "./assets/thumbnails/project/SpeedyBurger_Thumbnail.png";
 
+// Game Jam games
 import BubblePopThumb from "./assets/thumbnails/gamejam/Bubble_Pop_Thumbnail.png";
 import TLifeThumb from "./assets/thumbnails/gamejam/TLife_Thumbnail.png";
 
@@ -288,7 +293,7 @@ function App() {
                     ease: "easeOut"
                   }}
                 >
-                  Passionate student in video game development, specializing in Unreal Engine and Unity. Creation of immersive experiences, from design to implementation.
+                  Student passionate about video game development, specializing in Unreal Engine and Unity. I love learning new things and creating engaging gaming experiences.
                 </motion.p>
 
                 {/* Resume buttons */}
@@ -794,12 +799,7 @@ function App() {
                     viewport={{ once: true }}
                     transition={{ duration: 0.6, delay: 0.1 }}
                   >
-                    I'm a passionate game developer with
-                    expertise in multiple game engines and
-                    programming languages. My focus is on
-                    creating engaging gameplay experiences,
-                    optimizing performance, and bringing
-                    creative visions to life.
+                    I am a passionate game developer, working with several game engines and programming languages. I love learning new things and optimizing my code and games. 
                   </motion.p>
                   <motion.p
                     initial={{ opacity: 0, x: -20 }}
@@ -807,9 +807,8 @@ function App() {
                     viewport={{ once: true }}
                     transition={{ duration: 0.6, delay: 0.2 }}
                   >
-                    With experience in Unity and Unreal Engine, I can adapt
-                    to any project's needs. I regularly participate in
-                    game jams to sharpen my skills and explore new ideas.
+                    With my experience with Unity, Unreal Engine, and other projects, I can adapt to the needs of any project. I am a quick learner, whether it's an engine, a language, or software. 
+                    I try to participate in game jams to hone my skills and explore new ideas.
                   </motion.p>
                 </div>
               </motion.div>
@@ -830,7 +829,7 @@ function App() {
                 >
                   <h2>Get In Touch</h2>
                   <p className="text-muted-foreground">
-                    Interested in collaborating? Let's connect!
+                    Would you like to get in touch ? 
                   </p>
                 </motion.div>
 
@@ -898,8 +897,7 @@ function App() {
                   viewport={{ once: true }}
                   transition={{ duration: 0.6 }}
                 >
-                  © 2025 Game Developer Portfolio. All rights
-                  reserved.
+                  © 2025 Loïck Konieczny — All rights reserved.
                 </motion.p>
               </div>
             </footer>
