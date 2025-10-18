@@ -21,9 +21,16 @@ import {
   Globe,
   Palette,
   Download,
+  Box,
   Boxes,
+  Wrench,
+  Sparkles,
+  Layers,
+  Brush,
+  GitBranch,
+  Blocks,
+  Package,
 } from "lucide-react";
-// Use direct asset paths for SVGs (Vite will serve them from /src)
 import UnityIcon from "./components/icons/UnityIcon";
 import UnrealIcon from "./components/icons/UnrealIcon";
 import CsharpIcon from "./components/icons/CsharpIcon";
@@ -92,6 +99,25 @@ function App() {
       engine: "Unity",
       demoLink: "#",
       githubLink: "https://github.com/Wizi8914/UnityTPSGame",
+      fullDescription: "Space Adventure is an immersive third-person shooter that takes players on an epic journey through the cosmos. Navigate through hostile environments, engage in intense combat with AI-controlled enemies, and discover powerful weapons to aid your escape. The game features advanced AI behavior systems and smooth camera work powered by Cinemachine.",
+      features: [
+        "Dynamic enemy AI with multiple behavior states",
+        "Weapon system with multiple gun types",
+        "Cinematic camera movements and transitions",
+        "Immersive space environments",
+        "State machine-based character controller",
+        "Progressive difficulty system"
+      ],
+      role: "Solo Developer",
+      teamSize: "1",
+      duration: "3 months",
+      screenshots: [
+        "https://images.unsplash.com/photo-1614732414444-096e5f1122d5?w=800&auto=format&fit=crop",
+        "https://images.unsplash.com/photo-1542751371-adc38448a05e?w=800&auto=format&fit=crop",
+      ],
+      videos: [
+        "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4",
+      ],
     },
     {
       title: "Neon Pulse",
@@ -106,6 +132,22 @@ function App() {
       engine: "Unity",
       demoLink: "#",
       githubLink: "https://github.com/Wizi8914/Neon-Pulse",
+      fullDescription: "Neon Pulse brings the vibrant aesthetics of Synthwave to mobile rhythm gaming. Drive through neon-lit highways while matching beats and avoiding obstacles. The game features custom engine modifications for optimal mobile performance and an engaging visual experience that captures the essence of retro-futuristic aesthetics.",
+      features: [
+        "Multiple original Synthwave music tracks",
+        "Responsive rhythm-based gameplay mechanics",
+        "Stunning neon visual effects",
+        "Mobile-optimized performance",
+        "Progressive difficulty curve",
+        "Custom audio synchronization system"
+      ],
+      role: "Game Designer & Developer",
+      teamSize: "2",
+      duration: "2 months",
+      screenshots: [
+        "https://images.unsplash.com/photo-1550745165-9bc0b252726f?w=800&auto=format&fit=crop",
+        "https://images.unsplash.com/photo-1618172193622-ae2d025f4032?w=800&auto=format&fit=crop",
+      ],
     },
   ];
 
@@ -122,6 +164,24 @@ function App() {
       ],
       engine: "Unreal Engine 5",
       demoLink: "#",
+      fullDescription: "Speedy Burger is an innovative cooperative cooking game that uses custom-built physical controllers to create a unique arcade-style experience. Players must work together to prepare fast food orders accurately and quickly, managing ingredients and cooking stations while racing against the clock.",
+      features: [
+        "Custom physical controller integration",
+        "Cooperative multiplayer gameplay",
+        "Dynamic order generation system",
+        "Data-driven ingredient and recipe system",
+        "Custom shader effects for food visuals",
+        "Time-based scoring mechanism"
+      ],
+      role: "Gameplay Programmer",
+      teamSize: "4",
+      duration: "4 months",
+      screenshots: [
+        "https://images.unsplash.com/photo-1561758033-d89a9ad46330?w=800&auto=format&fit=crop",
+      ],
+      videos: [
+        "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4",
+      ],
     },
     {
       title: "Temple escape",
@@ -133,6 +193,22 @@ function App() {
       ],
       engine: "Unreal Engine 5",
       demoLink: "#",
+      fullDescription: "Temple Escape is a fast-paced party game where up to 4 players compete in an Indiana Jones-inspired temple escape challenge. Navigate treacherous traps, solve quick puzzles, and race against your friends in this action-packed mini-game experience.",
+      features: [
+        "Up to 4 player local multiplayer",
+        "Dynamic trap and hazard system",
+        "Competitive scoring system",
+        "Indiana Jones-themed environment",
+        "Quick-match gameplay sessions",
+        "Blueprint-based game logic"
+      ],
+      role: "Game Developer",
+      teamSize: "3",
+      duration: "2 months",
+      screenshots: [
+        "https://images.unsplash.com/photo-1663997605629-60d3d25a618c?w=800&auto=format&fit=crop",
+        "https://images.unsplash.com/photo-1609137144813-7d9921338f24?w=800&auto=format&fit=crop",
+      ],
     },
     {
       title: "Biogen",
@@ -144,6 +220,18 @@ function App() {
       ],
       engine: "Unreal Engine 5",
       demoLink: "#",
+      fullDescription: "Biogen showcases advanced UI/UX design in Unreal Engine 5, featuring a sophisticated HUD system and an interactive skill tree. This project demonstrates proficiency in creating complex user interfaces using UMG (Unreal Motion Graphics) and Widget Blueprints.",
+      features: [
+        "Advanced HUD with real-time updates",
+        "Interactive skill tree system",
+        "Dynamic widget animations",
+        "Custom UI components",
+        "Data-driven progression system",
+        "Responsive interface design"
+      ],
+      role: "UI/UX Developer",
+      teamSize: "2",
+      duration: "6 weeks",
     },
   ];
 
@@ -155,6 +243,18 @@ function App() {
       description:
         "Created in 48 hours for the 2025 Global Game Jam. A horror game set in a bubble wrap factory. Your goal is to escape without getting caught by the monster. Be careful not to step on the bubble wrap!",
       image: BubblePopThumb,
+      fullDescription: "Bubble Pop is a tension-filled horror game created during the 48-hour Global Game Jam 2025. Set in an eerie bubble wrap factory, players must navigate through dark corridors while avoiding a terrifying monster. Every step must be carefully planned - stepping on bubble wrap will alert the monster to your location. The game combines stealth mechanics with environmental awareness in a unique and suspenseful experience.",
+      features: [
+        "Stealth-based horror gameplay",
+        "Audio-reactive AI enemy",
+        "Environmental hazard mechanics",
+        "Atmospheric factory setting",
+        "Tension-building sound design",
+        "Created in 48 hours"
+      ],
+      role: "Game Designer & Programmer",
+      teamSize: "4",
+      duration: "48 hours",
       technologies: ["Blueprint", "AI Behavior"],
       engine: "Unreal Engine 5",
       demoLink: "https://globalgamejam.org/games/2025/bubble-pop-5-0",
@@ -168,6 +268,18 @@ function App() {
       engine: "Unity",
       demoLink: "https://globalgamejam.org/games/2024/t-life-4",
       githubLink: "https://github.com/Wizi8914/TLife",
+      fullDescription: "T-Life is a charming and humorous 2D game created during the 2024 Global Game Jam. Players help Gilbert, a loveable T-Rex, navigate daily life despite the challenges posed by his characteristically short arms. The game combines puzzle-solving with physics-based mechanics to create entertaining scenarios that highlight Gilbert's struggle with everyday tasks.",
+      features: [
+        "Physics-based puzzle mechanics",
+        "Charming 2D character animations",
+        "Multiple everyday task challenges",
+        "Humorous T-Rex character design",
+        "Creative problem-solving gameplay",
+        "Made in 48 hours"
+      ],
+      role: "Developer & Animator",
+      teamSize: "3",
+      duration: "48 hours",
     },
   ];
 

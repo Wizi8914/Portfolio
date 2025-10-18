@@ -246,7 +246,13 @@ body {
   cursor: default;
 }
 
-a, button, [role="button"], input[type="submit"], input[type="button"], select, label[for] {
+a,
+button,
+[role="button"],
+input[type="submit"],
+input[type="button"],
+select,
+label[for] {
   cursor: pointer !important;
 }
 
