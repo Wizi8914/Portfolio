@@ -78,7 +78,7 @@ export function GameCard({
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, margin: "-100px" }}
-        transition={{ duration: 0.5 }}
+    transition={{ duration: 0.35 }}
         whileHover={{ y: -8 }}
         onHoverStart={() => setIsHovered(true)}
         onHoverEnd={() => setIsHovered(false)}
@@ -91,7 +91,7 @@ export function GameCard({
         <div className="aspect-video w-full overflow-hidden relative">
           <motion.div
             animate={{ scale: isHovered ? 1.1 : 1 }}
-            transition={{ duration: 0.3 }}
+            transition={{ duration: 0.22 }}
           >
             <ImageWithFallback
               src={image}
@@ -102,7 +102,7 @@ export function GameCard({
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: isHovered ? 1 : 0 }}
-            transition={{ duration: 0.3 }}
+            transition={{ duration: 0.22 }}
             className="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent flex items-end p-4"
           >
             <motion.p
@@ -111,7 +111,7 @@ export function GameCard({
                 y: isHovered ? 0 : 20,
                 opacity: isHovered ? 1 : 0,
               }}
-              transition={{ duration: 0.3, delay: 0.1 }}
+              transition={{ duration: 0.22, delay: 0.1 }}
               className="text-primary-foreground"
             >
               Click to explore
@@ -212,7 +212,7 @@ export function GameCard({
           className="space-y-6 mt-4"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.3 }}
+          transition={{ duration: 0.22 }}
         >
           {/* Media Carousel */}
           {mediaItems.length > 1 ? (
@@ -240,7 +240,7 @@ export function GameCard({
                         className="relative aspect-video w-full overflow-hidden rounded-lg border border-border/50 bg-muted/20"
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
-                        transition={{ duration: 0.5 }}
+                        transition={{ duration: 0.35 }}
                       >
                         {item.type === 'image' ? (
                           <ImageWithFallback

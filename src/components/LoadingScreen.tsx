@@ -25,7 +25,7 @@ export function LoadingScreen({ onComplete }: { onComplete: () => void }) {
       className="fixed inset-0 z-[100] flex items-center justify-center bg-background"
       initial={{ opacity: 1 }}
       exit={{ opacity: 0 }}
-      transition={{ duration: 0.5 }}
+      transition={{ duration: 0.35 }}
     >
       {/* Animated background particles */}
       <div className="absolute inset-0 overflow-hidden">
@@ -45,7 +45,7 @@ export function LoadingScreen({ onComplete }: { onComplete: () => void }) {
               opacity: [0.3, 0.8, 0.3],
             }}
             transition={{
-              duration: Math.random() * 3 + 2,
+              duration: Math.random() * 2.2 + 1.8,
               repeat: Infinity,
               ease: "easeInOut",
             }}
@@ -73,7 +73,7 @@ export function LoadingScreen({ onComplete }: { onComplete: () => void }) {
               rotate: 360,
             }}
             transition={{ 
-              duration: 3, 
+              duration: 2.2, 
               repeat: Infinity, 
               ease: "linear" 
             }}
@@ -91,7 +91,7 @@ export function LoadingScreen({ onComplete }: { onComplete: () => void }) {
                 rotate: 360,
               }}
               transition={{
-                duration: 2,
+                duration: 1.4,
                 repeat: Infinity,
                 ease: "linear",
                 delay: i * 0.2,
@@ -133,20 +133,20 @@ export function LoadingScreen({ onComplete }: { onComplete: () => void }) {
                 "0 0 10px rgba(139, 92, 246, 0.5)",
               ],
             }}
-            transition={{ duration: 2, repeat: Infinity }}
+            transition={{ duration: 1.5, repeat: Infinity }}
           >
             Loading Portfolio
           </motion.h1>
           <div className="flex items-center gap-2 justify-center text-muted-foreground">
             <motion.span
               animate={{ opacity: [1, 0.5, 1] }}
-              transition={{ duration: 1.5, repeat: Infinity }}
+              transition={{ duration: 1, repeat: Infinity }}
             >
               Initializing
             </motion.span>
             <motion.div
               animate={{ rotate: 360 }}
-              transition={{ duration: 1, repeat: Infinity, ease: "linear" }}
+              transition={{ duration: 0.8, repeat: Infinity, ease: "linear" }}
             >
               <Zap className="w-4 h-4 text-accent" />
             </motion.div>

@@ -2293,7 +2293,7 @@
 
   .animated-gradient {
     background: linear-gradient(135deg, #050114 0%, #0d0322 25%, #1a0b2e 50%, #0d0322 75%, #050114 100%) 0 0 / 400% 400%;
-    animation: 20s infinite gradient-shift;
+  animation: 12s infinite gradient-shift;
   }
 
   @keyframes gradient-shift {

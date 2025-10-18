@@ -34,7 +34,7 @@ export function Header() {
     <motion.header 
       initial={{ y: -100, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
-      transition={{ duration: 0.8, ease: "easeOut" }}
+      transition={{ duration: 0.6, ease: "easeOut" }}
       className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60"
     >
       <div className="container mx-auto px-4 md:px-6 lg:px-8 flex h-16 items-center justify-between">
@@ -51,7 +51,7 @@ export function Header() {
               animate={{ opacity: 1, y: 0 }}
               whileTap={{ scale: 0.98 }}
               transition={{ 
-                duration: 0.6, 
+                duration: 0.45, 
                 delay: 0.3 + index * 0.1, 
                 ease: "easeOut"
               }}

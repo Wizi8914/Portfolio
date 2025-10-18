@@ -212,7 +212,7 @@ html {
       #050114 100%
     );
     background-size: 400% 400%;
-    animation: gradient-shift 20s ease infinite;
+  animation: gradient-shift 12s ease infinite;
   }
 
   @keyframes gradient-shift {

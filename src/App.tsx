@@ -317,7 +317,7 @@ function App() {
                 <motion.div
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
-                  transition={{ duration: 0.5 }}
+                  transition={{ duration: 0.35 }}
                 >
                   <motion.h1
                     className="text-5xl md:text-6xl lg:text-7xl mb-4"
@@ -349,7 +349,7 @@ function App() {
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{
-                          duration: 0.5,
+                          duration: 0.35,
                           delay: index * 0.05,
                           ease: "easeOut"
                         }}
@@ -368,7 +368,7 @@ function App() {
                       y: 0,
                     }}
                     transition={{
-                      duration: 0.6,
+                      duration: 0.45,
                       delay: 0.8,
                       ease: "easeOut"
                     }}
@@ -400,7 +400,7 @@ function App() {
                     y: 0,
                   }}
                   transition={{
-                    duration: 0.8,
+                    duration: 0.6,
                     delay: 1.2,
                     ease: "easeOut"
                   }}
@@ -417,7 +417,7 @@ function App() {
                     y: 0,
                   }}
                   transition={{
-                    duration: 0.8,
+                    duration: 0.6,
                     delay: 1.5,
                     ease: "easeOut"
                   }}
