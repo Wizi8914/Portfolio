@@ -289,3 +289,22 @@ label[for] {
 }
 
 /* Make sure selection and scrollbars also look good in dark mode by relying on CSS vars */
+
+/* --- Project description min-width overrides --- */
+/* Make project descriptions much wider across breakpoints */
+[data-slot="dialog-content"] {
+  min-width: 500px !important; /* mobile baseline increased */
+}
+
+
+@media (min-width: 1100px) {
+  [data-slot="dialog-content"] {
+    min-width: 750px !important; /* tablet / small desktop */
+  }
+}
+
+@media (min-width: 1400px) {
+  [data-slot="dialog-content"] {
+    min-width: 1400px !important; /* very large desktop */
+  }
+}

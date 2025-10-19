@@ -12,24 +12,10 @@ import {
   Mail,
   Linkedin,
   Github,
-  Twitter,
-  Zap,
-  Code,
-  Cpu,
   Gamepad2,
   Database,
-  Globe,
-  Palette,
   Download,
-  Box,
   Boxes,
-  Wrench,
-  Sparkles,
-  Layers,
-  Brush,
-  GitBranch,
-  Blocks,
-  Package,
 } from "lucide-react";
 import UnityIcon from "./components/icons/UnityIcon";
 import UnrealIcon from "./components/icons/UnrealIcon";
@@ -61,17 +47,26 @@ import JavaIcon from "./components/icons/JavaIcon";
 // Thumbnails
 
 // Unity games
-import NeonPuseThumb from "./assets/thumbnails/project/Neon_Pulse_Thumbnail.png";
-import SpaceAdventureThumb from "./assets/thumbnails/project/SpaceAdventure_Thumbnail.png";
+import NeonPuseThumb from "./assets/thumbnails/project/Neon_Pulse/Neon_Pulse_Thumbnail_1.png";
+import SpaceAdventureThumb from "./assets/thumbnails/project/SpaceAdventure/SpaceAdventure_Thumbnail_1.png";
+import SpaceAdventureVideo from "./assets/thumbnails/project/SpaceAdventure/SpaceAdventure_Thumbnail_2.mp4";
+import NeonPuseVideo from "./assets/thumbnails/project/Neon_Pulse/Neon_Pulse_Thumbnail_2.mp4";
 
 // Unreal Engine games
-import BiogenThumb from "./assets/thumbnails/project/Biogen_Thumbnail.png";
-import IndianaThumb from "./assets/thumbnails/project/Indiana_Thumbnail.png";
-import SpeedyBurgerThumb from "./assets/thumbnails/project/SpeedyBurger_Thumbnail.png";
+import BiogenThumb from "./assets/thumbnails/project/Biogen/Biogen_Thumbnail_1.png";
+import IndianaThumb from "./assets/thumbnails/project/Indiana/Indiana_Thumbnail_1.png";
+import SpeedyBurgerThumb from "./assets/thumbnails/project/SpeedyBurger/SpeedyBurger_Thumbnail_1.png";
+import SpeedyBurgerThumb2 from "./assets/thumbnails/project/SpeedyBurger/SpeedyBurger_Thumbnail_2.jpg";
 
 // Game Jam games
-import BubblePopThumb from "./assets/thumbnails/gamejam/Bubble_Pop_Thumbnail.png";
-import TLifeThumb from "./assets/thumbnails/gamejam/TLife_Thumbnail.png";
+import BubblePopThumb from "./assets/thumbnails/gamejam/Bubble_Pop/Bubble_Pop_Thumbnail_1.png";
+import BubblePopThumb2 from "./assets/thumbnails/gamejam/Bubble_Pop/Bubble_Pop_Thumbnail_2.png";
+import BubblePopThumb3 from "./assets/thumbnails/gamejam/Bubble_Pop/Bubble_Pop_Thumbnail_3.png";
+import BubblePopThumb4 from "./assets/thumbnails/gamejam/Bubble_Pop/Bubble_Pop_Thumbnail_4.png";
+import TLifeThumb from "./assets/thumbnails/gamejam/TLife/TLife_Thumbnail_1.png";
+import TLifeThumb2 from "./assets/thumbnails/gamejam/TLife/TLife_Thumbnail_2.png";
+import TLifeThumb3 from "./assets/thumbnails/gamejam/TLife/TLife_Thumbnail_3.png";
+import TLifeThumb4 from "./assets/thumbnails/gamejam/TLife/TLife_Thumbnail_4.png";
 
 import { Button } from "./components/ui/button";
 import { motion, AnimatePresence } from "motion/react";
@@ -117,6 +112,7 @@ function App() {
       ],
       videos: [
         "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4",
+        SpaceAdventureVideo,
       ],
     },
     {
@@ -148,6 +144,7 @@ function App() {
         "https://images.unsplash.com/photo-1550745165-9bc0b252726f?w=800&auto=format&fit=crop",
         "https://images.unsplash.com/photo-1618172193622-ae2d025f4032?w=800&auto=format&fit=crop",
       ],
+      videos: [NeonPuseVideo],
     },
   ];
 
@@ -178,6 +175,7 @@ function App() {
       duration: "4 months",
       screenshots: [
         "https://images.unsplash.com/photo-1561758033-d89a9ad46330?w=800&auto=format&fit=crop",
+        SpeedyBurgerThumb2,
       ],
       videos: [
         "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4",
@@ -258,6 +256,7 @@ function App() {
       technologies: ["Blueprint", "AI Behavior"],
       engine: "Unreal Engine 5",
       demoLink: "https://globalgamejam.org/games/2025/bubble-pop-5-0",
+      screenshots: [BubblePopThumb2, BubblePopThumb3, BubblePopThumb4],
     },
     {
       title: "T-Life",
@@ -280,6 +279,7 @@ function App() {
       role: "Developer & Animator",
       teamSize: "3",
       duration: "48 hours",
+      screenshots: [TLifeThumb2, TLifeThumb3, TLifeThumb4],
     },
   ];
 

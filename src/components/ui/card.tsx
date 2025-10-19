@@ -42,7 +42,12 @@ function CardDescription({ className, ...props }: React.ComponentProps<"div">) {
   return (
     <p
       data-slot="card-description"
-      className={cn("text-muted-foreground", className)}
+      // Responsive: smaller on mobile, normal on md+; allow max-width to keep readable lines
+      className={cn(
+        "text-muted-foreground text-sm md:text-base lg:text-base leading-relaxed md:leading-relaxed",
+        "max-w-full md:max-w-[48rem]",
+        className,
+      )}
       {...props}
     />
   );

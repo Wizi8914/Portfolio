@@ -195,7 +195,7 @@ export function GameCard({
     <Dialog open={isDialogOpen} onOpenChange={setIsDialogOpen}>
       <DialogContent className="max-w-[95vw] w-[95vw] max-h-[90vh] overflow-y-auto border-primary/30 shadow-2xl shadow-primary/10">
         <DialogHeader>
-          <div className="flex items-start justify-between gap-4 pr-8">
+          <div className="flex items-start justify-between gap-4">
             <div className="flex-1">
               <DialogTitle className="text-3xl mb-2 glow-text">{title}</DialogTitle>
               <DialogDescription className="text-base">
@@ -289,9 +289,7 @@ export function GameCard({
                     />
                   ))}
                 </div>
-                <p className="text-xs text-muted-foreground sm:hidden">
-                  👆 Swipe to navigate
-                </p>
+                {/* swipe hint removed for mobile */}
               </div>
             </div>
           ) : (
@@ -342,9 +340,12 @@ export function GameCard({
                 <Info className="h-5 w-5 text-primary" />
                 <h3 className="text-lg">About This Project</h3>
               </div>
-              <p className="text-muted-foreground leading-relaxed">
-                {fullDescription}
-              </p>
+              {/* Responsive container: center content, limit width, and slightly scale on very small devices */}
+              <div className="mx-auto w-full max-w-full sm:max-w-[28rem] md:max-w-[48rem] lg:max-w-[64rem] transform transition-transform duration-200 sm:scale-100 scale-95">
+                <p className="text-muted-foreground leading-relaxed">
+                  {fullDescription}
+                </p>
+              </div>
             </div>
           )}
 
