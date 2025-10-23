@@ -8,7 +8,7 @@ import {
 } from "./ui/card";
 import { Badge } from "./ui/badge";
 import { ImageWithFallback } from "./figma/ImageWithFallback";
-import { ExternalLink, Github, X, Calendar, Users, Award, Info, Play } from "lucide-react";
+import { ExternalLink, Github, Calendar, Users, Award, Info } from "lucide-react";
 import { Button } from "./ui/button";
 import {
   Dialog,
@@ -78,7 +78,7 @@ export function GameCard({
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, margin: "-100px" }}
-    transition={{ duration: 0.35 }}
+          transition={{ duration: 0.3 }}
         whileHover={{ y: -8 }}
         onHoverStart={() => setIsHovered(true)}
         onHoverEnd={() => setIsHovered(false)}
@@ -91,7 +91,7 @@ export function GameCard({
         <div className="aspect-video w-full overflow-hidden relative">
           <motion.div
             animate={{ scale: isHovered ? 1.1 : 1 }}
-            transition={{ duration: 0.22 }}
+              transition={{ duration: 0.18 }}
           >
             <ImageWithFallback
               src={image}
@@ -102,7 +102,7 @@ export function GameCard({
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: isHovered ? 1 : 0 }}
-            transition={{ duration: 0.22 }}
+              transition={{ duration: 0.18 }}
             className="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent flex items-end p-4"
           >
             <motion.p
@@ -111,7 +111,7 @@ export function GameCard({
                 y: isHovered ? 0 : 20,
                 opacity: isHovered ? 1 : 0,
               }}
-              transition={{ duration: 0.22, delay: 0.1 }}
+              transition={{ duration: 0.3, delay: 0.1 }}
               className="text-primary-foreground"
             >
               Click to explore
@@ -140,10 +140,10 @@ export function GameCard({
                 initial={{ opacity: 0, scale: 0.8 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
-                transition={{
-                  duration: 0.3,
-                  delay: index * 0.05,
-                }}
+                  transition={{
+                    duration: 0.18,
+                    delay: index * 0.03,
+                  }}
               >
                 <Badge variant="outline">{tech}</Badge>
               </motion.div>
@@ -195,7 +195,7 @@ export function GameCard({
     <Dialog open={isDialogOpen} onOpenChange={setIsDialogOpen}>
       <DialogContent className="max-w-[95vw] w-[95vw] max-h-[90vh] overflow-y-auto border-primary/30 shadow-2xl shadow-primary/10">
         <DialogHeader>
-          <div className="flex items-start justify-between gap-4">
+          <div className="flex items-start justify-between gap-4 pr-8">
             <div className="flex-1">
               <DialogTitle className="text-3xl mb-2 glow-text">{title}</DialogTitle>
               <DialogDescription className="text-base">
@@ -212,7 +212,7 @@ export function GameCard({
           className="space-y-6 mt-4"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.22 }}
+            transition={{ duration: 0.18 }}
         >
           {/* Media Carousel */}
           {mediaItems.length > 1 ? (
@@ -240,7 +240,7 @@ export function GameCard({
                         className="relative aspect-video w-full overflow-hidden rounded-lg border border-border/50 bg-muted/20"
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
-                        transition={{ duration: 0.35 }}
+                          transition={{ duration: 0.3 }}
                       >
                         {item.type === 'image' ? (
                           <ImageWithFallback
@@ -252,7 +252,7 @@ export function GameCard({
                           <div className="relative w-full h-full group">
                             <video
                               controls
-                              className="w-full h-full object-cover bg-black transition-transform duration-300"
+                                className="w-full h-full object-cover bg-black transition-transform duration-200"
                               poster={image}
                               preload="metadata"
                             >
@@ -264,7 +264,8 @@ export function GameCard({
                         {/* Slide indicator */}
                         <div className="absolute bottom-3 right-3 pointer-events-none">
                           <Badge variant="secondary" className="text-xs bg-black/70 backdrop-blur-sm">
-                            {index + 1} / {mediaItems.length}
+                              {/* numeric counter intentionally left in case needed; visually smaller transition */}
+                              {index + 1} / {mediaItems.length}
                           </Badge>
                         </div>
                       </motion.div>
@@ -289,7 +290,9 @@ export function GameCard({
                     />
                   ))}
                 </div>
-                {/* swipe hint removed for mobile */}
+                <p className="text-xs text-muted-foreground sm:hidden">
+                  👆 Swipe to navigate
+                </p>
               </div>
             </div>
           ) : (
@@ -340,12 +343,9 @@ export function GameCard({
                 <Info className="h-5 w-5 text-primary" />
                 <h3 className="text-lg">About This Project</h3>
               </div>
-              {/* Responsive container: center content, limit width, and slightly scale on very small devices */}
-              <div className="mx-auto w-full max-w-full sm:max-w-[28rem] md:max-w-[48rem] lg:max-w-[64rem] transform transition-transform duration-200 sm:scale-100 scale-95">
-                <p className="text-muted-foreground leading-relaxed">
-                  {fullDescription}
-                </p>
-              </div>
+              <p className="text-muted-foreground leading-relaxed">
+                {fullDescription}
+              </p>
             </div>
           )}
 

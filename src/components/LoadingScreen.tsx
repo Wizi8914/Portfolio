@@ -25,7 +25,7 @@ export function LoadingScreen({ onComplete }: { onComplete: () => void }) {
       className="fixed inset-0 z-[100] flex items-center justify-center bg-background"
       initial={{ opacity: 1 }}
       exit={{ opacity: 0 }}
-      transition={{ duration: 0.35 }}
+      transition={{ duration: 0.3 }}
     >
       {/* Animated background particles */}
       <div className="absolute inset-0 overflow-hidden">
@@ -45,7 +45,8 @@ export function LoadingScreen({ onComplete }: { onComplete: () => void }) {
               opacity: [0.3, 0.8, 0.3],
             }}
             transition={{
-              duration: Math.random() * 2.2 + 1.8,
+              // scaled ~0.6x for snappier motion
+              duration: Math.random() * 1.8 + 1.2,
               repeat: Infinity,
               ease: "easeInOut",
             }}
@@ -73,7 +74,7 @@ export function LoadingScreen({ onComplete }: { onComplete: () => void }) {
               rotate: 360,
             }}
             transition={{ 
-              duration: 2.2, 
+              duration: 1.8, 
               repeat: Infinity, 
               ease: "linear" 
             }}
@@ -91,10 +92,10 @@ export function LoadingScreen({ onComplete }: { onComplete: () => void }) {
                 rotate: 360,
               }}
               transition={{
-                duration: 1.4,
+                duration: 1.2,
                 repeat: Infinity,
                 ease: "linear",
-                delay: i * 0.2,
+                delay: i * 0.12,
               }}
             >
               <motion.div
@@ -107,7 +108,7 @@ export function LoadingScreen({ onComplete }: { onComplete: () => void }) {
                   opacity: [0.5, 1, 0.5],
                 }}
                 transition={{
-                  duration: 1,
+                  duration: 0.6,
                   repeat: Infinity,
                 }}
               >
@@ -122,7 +123,7 @@ export function LoadingScreen({ onComplete }: { onComplete: () => void }) {
           className="text-center space-y-2"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.3 }}
+          transition={{ delay: 0.18 }}
         >
           <motion.h1
             className="text-3xl md:text-4xl"
@@ -133,20 +134,20 @@ export function LoadingScreen({ onComplete }: { onComplete: () => void }) {
                 "0 0 10px rgba(139, 92, 246, 0.5)",
               ],
             }}
-            transition={{ duration: 1.5, repeat: Infinity }}
+            transition={{ duration: 1.2, repeat: Infinity }}
           >
             Loading Portfolio
           </motion.h1>
           <div className="flex items-center gap-2 justify-center text-muted-foreground">
             <motion.span
               animate={{ opacity: [1, 0.5, 1] }}
-              transition={{ duration: 1, repeat: Infinity }}
+              transition={{ duration: 0.9, repeat: Infinity }}
             >
               Initializing
             </motion.span>
             <motion.div
               animate={{ rotate: 360 }}
-              transition={{ duration: 0.8, repeat: Infinity, ease: "linear" }}
+              transition={{ duration: 1, repeat: Infinity, ease: "linear" }}
             >
               <Zap className="w-4 h-4 text-accent" />
             </motion.div>
@@ -160,14 +161,14 @@ export function LoadingScreen({ onComplete }: { onComplete: () => void }) {
               className="h-full bg-gradient-to-r from-primary via-secondary to-accent rounded-full"
               initial={{ width: 0 }}
               animate={{ width: `${progress}%` }}
-              transition={{ duration: 0.3 }}
+              transition={{ duration: 0.18 }}
             />
           </div>
           <motion.div
             className="text-center text-sm text-muted-foreground"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ delay: 0.5 }}
+            transition={{ delay: 0.3 }}
           >
             {progress}%
           </motion.div>
@@ -178,7 +179,7 @@ export function LoadingScreen({ onComplete }: { onComplete: () => void }) {
           className="flex gap-4 mt-4"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.7 }}
+          transition={{ delay: 0.42 }}
         >
           {['Ready', 'Player', 'One'].map((word, i) => (
             <motion.span
@@ -189,9 +190,9 @@ export function LoadingScreen({ onComplete }: { onComplete: () => void }) {
                 opacity: [0.6, 1, 0.6],
               }}
               transition={{
-                duration: 1.5,
+                duration: 0.9,
                 repeat: Infinity,
-                delay: i * 0.2,
+                delay: i * 0.12,
               }}
             >
               {word}

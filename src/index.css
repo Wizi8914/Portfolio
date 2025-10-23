@@ -97,7 +97,8 @@
     --ease-in-out: cubic-bezier(.4, 0, .2, 1);
     --blur-sm: 8px;
     --aspect-video: 16 / 9;
-    --default-transition-duration: .15s;
+  /* reduced from .15s to .09s to make transitions ~40% faster */
+  --default-transition-duration: .09s;
     --default-transition-timing-function: cubic-bezier(.4, 0, .2, 1);
     --default-font-family: var(--font-sans);
     --default-font-feature-settings: var(--font-sans--font-feature-settings);
@@ -1572,13 +1573,13 @@
   }
 
   .duration-200 {
-    --tw-duration: .2s;
-    transition-duration: .2s;
+    --tw-duration: .12s;
+    transition-duration: .12s;
   }
 
   .duration-300 {
-    --tw-duration: .3s;
-    transition-duration: .3s;
+    --tw-duration: .18s;
+    transition-duration: .18s;
   }
 
   .ease-in-out {
@@ -1860,8 +1861,8 @@
   }
 
   .data-\[state\=closed\]\:duration-300[data-state="closed"] {
-    --tw-duration: .3s;
-    transition-duration: .3s;
+    --tw-duration: .18s;
+    transition-duration: .18s;
   }
 
   .data-\[state\=closed\]\:fade-out-0[data-state="closed"] {
@@ -1905,8 +1906,8 @@
   }
 
   .data-\[state\=open\]\:duration-500[data-state="open"] {
-    --tw-duration: .5s;
-    transition-duration: .5s;
+    --tw-duration: .3s;
+    transition-duration: .3s;
   }
 
   .data-\[state\=open\]\:fade-in-0[data-state="open"] {
@@ -2293,7 +2294,7 @@
 
   .animated-gradient {
     background: linear-gradient(135deg, #050114 0%, #0d0322 25%, #1a0b2e 50%, #0d0322 75%, #050114 100%) 0 0 / 400% 400%;
-  animation: 12s infinite gradient-shift;
+    animation: 20s infinite gradient-shift;
   }
 
   @keyframes gradient-shift {

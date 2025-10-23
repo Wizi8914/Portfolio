@@ -8,15 +8,7 @@ import {
   TabsList,
   TabsTrigger,
 } from "./components/ui/tabs";
-import {
-  Mail,
-  Linkedin,
-  Github,
-  Gamepad2,
-  Database,
-  Download,
-  Boxes,
-} from "lucide-react";
+import { Mail, Linkedin, Github, Gamepad2, Download, Database, Boxes } from "lucide-react";
 import UnityIcon from "./components/icons/UnityIcon";
 import UnrealIcon from "./components/icons/UnrealIcon";
 import CsharpIcon from "./components/icons/CsharpIcon";
@@ -48,25 +40,19 @@ import JavaIcon from "./components/icons/JavaIcon";
 
 // Unity games
 import NeonPuseThumb from "./assets/thumbnails/project/Neon_Pulse/Neon_Pulse_Thumbnail_1.png";
+import NeonPuseThumb2 from "./assets/thumbnails/project/Neon_Pulse/Neon_Pulse_Thumbnail_2.png";
+import NeonPuseThumb3 from "./assets/thumbnails/project/Neon_Pulse/Neon_Pulse_Thumbnail_3.png";
+import NeonPuseVideo from "./assets/thumbnails/project/Neon_Pulse/Neon_Pulse_Thumbnail_4.mp4";
 import SpaceAdventureThumb from "./assets/thumbnails/project/SpaceAdventure/SpaceAdventure_Thumbnail_1.png";
-import SpaceAdventureVideo from "./assets/thumbnails/project/SpaceAdventure/SpaceAdventure_Thumbnail_2.mp4";
-import NeonPuseVideo from "./assets/thumbnails/project/Neon_Pulse/Neon_Pulse_Thumbnail_2.mp4";
 
 // Unreal Engine games
 import BiogenThumb from "./assets/thumbnails/project/Biogen/Biogen_Thumbnail_1.png";
 import IndianaThumb from "./assets/thumbnails/project/Indiana/Indiana_Thumbnail_1.png";
 import SpeedyBurgerThumb from "./assets/thumbnails/project/SpeedyBurger/SpeedyBurger_Thumbnail_1.png";
-import SpeedyBurgerThumb2 from "./assets/thumbnails/project/SpeedyBurger/SpeedyBurger_Thumbnail_2.jpg";
 
 // Game Jam games
 import BubblePopThumb from "./assets/thumbnails/gamejam/Bubble_Pop/Bubble_Pop_Thumbnail_1.png";
-import BubblePopThumb2 from "./assets/thumbnails/gamejam/Bubble_Pop/Bubble_Pop_Thumbnail_2.png";
-import BubblePopThumb3 from "./assets/thumbnails/gamejam/Bubble_Pop/Bubble_Pop_Thumbnail_3.png";
-import BubblePopThumb4 from "./assets/thumbnails/gamejam/Bubble_Pop/Bubble_Pop_Thumbnail_4.png";
 import TLifeThumb from "./assets/thumbnails/gamejam/TLife/TLife_Thumbnail_1.png";
-import TLifeThumb2 from "./assets/thumbnails/gamejam/TLife/TLife_Thumbnail_2.png";
-import TLifeThumb3 from "./assets/thumbnails/gamejam/TLife/TLife_Thumbnail_3.png";
-import TLifeThumb4 from "./assets/thumbnails/gamejam/TLife/TLife_Thumbnail_4.png";
 
 import { Button } from "./components/ui/button";
 import { motion, AnimatePresence } from "motion/react";
@@ -112,7 +98,6 @@ function App() {
       ],
       videos: [
         "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4",
-        SpaceAdventureVideo,
       ],
     },
     {
@@ -140,11 +125,10 @@ function App() {
       role: "Game Designer & Developer",
       teamSize: "2",
       duration: "2 months",
-      screenshots: [
-        "https://images.unsplash.com/photo-1550745165-9bc0b252726f?w=800&auto=format&fit=crop",
-        "https://images.unsplash.com/photo-1618172193622-ae2d025f4032?w=800&auto=format&fit=crop",
+      screenshots: [NeonPuseThumb2, NeonPuseThumb3],
+      videos: [
+        NeonPuseVideo,
       ],
-      videos: [NeonPuseVideo],
     },
   ];
 
@@ -175,7 +159,6 @@ function App() {
       duration: "4 months",
       screenshots: [
         "https://images.unsplash.com/photo-1561758033-d89a9ad46330?w=800&auto=format&fit=crop",
-        SpeedyBurgerThumb2,
       ],
       videos: [
         "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4",
@@ -256,7 +239,6 @@ function App() {
       technologies: ["Blueprint", "AI Behavior"],
       engine: "Unreal Engine 5",
       demoLink: "https://globalgamejam.org/games/2025/bubble-pop-5-0",
-      screenshots: [BubblePopThumb2, BubblePopThumb3, BubblePopThumb4],
     },
     {
       title: "T-Life",
@@ -279,7 +261,6 @@ function App() {
       role: "Developer & Animator",
       teamSize: "3",
       duration: "48 hours",
-      screenshots: [TLifeThumb2, TLifeThumb3, TLifeThumb4],
     },
   ];
 
@@ -316,8 +297,8 @@ function App() {
                 {/* Name with character-by-character animation */}
                 <motion.div
                   initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  transition={{ duration: 0.35 }}
+                    animate={{ opacity: 1 }}
+                    transition={{ duration: 0.3 }}
                 >
                   <motion.h1
                     className="text-5xl md:text-6xl lg:text-7xl mb-4"
@@ -332,14 +313,14 @@ function App() {
                       ],
                     }}
                     transition={{
-                      opacity: { duration: 0.8, ease: "easeOut" },
-                      y: { duration: 0.8, ease: "easeOut" },
+                      opacity: { duration: 0.5, ease: "easeOut" },
+                      y: { duration: 0.5, ease: "easeOut" },
                       textShadow: {
-                        duration: 3,
+                        duration: 1.8,
                         repeat: Infinity,
                         ease: "easeInOut",
                         repeatType: "reverse",
-                        delay: 1
+                        delay: 0.6
                       }
                     }}
                   >
@@ -349,8 +330,8 @@ function App() {
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{
-                          duration: 0.35,
-                          delay: index * 0.05,
+                          duration: 0.3,
+                          delay: index * 0.03,
                           ease: "easeOut"
                         }}
                       >
@@ -368,8 +349,8 @@ function App() {
                       y: 0,
                     }}
                     transition={{
-                      duration: 0.45,
-                      delay: 0.8,
+                      duration: 0.36,
+                      delay: 0.48,
                       ease: "easeOut"
                     }}
                     className="text-xl md:text-2xl text-primary"
@@ -379,11 +360,11 @@ function App() {
                         opacity: [0.9, 1, 0.9],
                       }}
                       transition={{
-                        duration: 4,
+                        duration: 2.4,
                         repeat: Infinity,
                         ease: "easeInOut",
                         repeatType: "reverse",
-                        delay: 1.5
+                        delay: 0.9
                       }}
                     >
                       Game Developer
@@ -400,8 +381,8 @@ function App() {
                     y: 0,
                   }}
                   transition={{
-                    duration: 0.6,
-                    delay: 1.2,
+                    duration: 0.48,
+                    delay: 0.72,
                     ease: "easeOut"
                   }}
                 >
@@ -417,8 +398,8 @@ function App() {
                     y: 0,
                   }}
                   transition={{
-                    duration: 0.6,
-                    delay: 1.5,
+                    duration: 0.48,
+                    delay: 0.9,
                     ease: "easeOut"
                   }}
                   onAnimationComplete={() => setTopDone(true)}
@@ -445,12 +426,12 @@ function App() {
             </section>
 
             {/* Projects Section */}
-            <motion.section
+              <motion.section
               id="projects"
               className="container mx-auto px-4 md:px-6 lg:px-8 py-16 md:py-24 bg-muted/30 relative"
               initial={{ opacity: 0, y: 20, pointerEvents: "none" }}
               animate={topDone ? { opacity: 1, y: 0, pointerEvents: "auto" } : { opacity: 0, y: 20, pointerEvents: "none" }}
-              transition={{ duration: 0.6, ease: "easeOut" }}
+              transition={{ duration: 0.36, ease: "easeOut" }}
             >
               <div className="space-y-8">
                 <motion.div
@@ -458,7 +439,7 @@ function App() {
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
-                  transition={{ duration: 0.6 }}
+                  transition={{ duration: 0.36 }}
                 >
                   <h2>Featured Projects</h2>
                   <p className="text-muted-foreground">
@@ -476,7 +457,7 @@ function App() {
                     initial={{ opacity: 0, y: 10 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
-                    transition={{ duration: 0.6, ease: "easeOut" }}
+                    transition={{ duration: 0.36, ease: "easeOut" }}
                   >
                     <TabsList className="flex w-full max-w-3xl gap-2 p-1.5 justify-center">
                       <TabsTrigger
@@ -547,7 +528,7 @@ function App() {
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
-                  transition={{ duration: 0.6 }}
+                  transition={{ duration: 0.36 }}
                 >
                   <h2>Game Jam Projects</h2>
                   <p className="text-muted-foreground">
@@ -575,7 +556,7 @@ function App() {
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
-                  transition={{ duration: 0.6 }}
+                  transition={{ duration: 0.36 }}
                 >
                   <h2>Technologies & Skills</h2>
                   <p className="text-muted-foreground">
@@ -901,7 +882,7 @@ function App() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.6 }}
+                transition={{ duration: 0.36 }}
               >
                 <h2 className="text-center">About Me</h2>
                 <div className="space-y-4 text-muted-foreground">
@@ -909,7 +890,7 @@ function App() {
                     initial={{ opacity: 0, x: -20 }}
                     whileInView={{ opacity: 1, x: 0 }}
                     viewport={{ once: true }}
-                    transition={{ duration: 0.6, delay: 0.1 }}
+                    transition={{ duration: 0.36, delay: 0.06 }}
                   >
                     I am a passionate game developer, working with several game engines and programming languages. I love learning new things and optimizing my code and games. 
                   </motion.p>
@@ -917,7 +898,7 @@ function App() {
                     initial={{ opacity: 0, x: -20 }}
                     whileInView={{ opacity: 1, x: 0 }}
                     viewport={{ once: true }}
-                    transition={{ duration: 0.6, delay: 0.2 }}
+                    transition={{ duration: 0.36, delay: 0.12 }}
                   >
                     With my experience with Unity, Unreal Engine, and other projects, I can adapt to the needs of any project. I am a quick learner, whether it's an engine, a language, or software. 
                     I try to participate in game jams to hone my skills and explore new ideas.
