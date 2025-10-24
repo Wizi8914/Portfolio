@@ -44,15 +44,23 @@ import NeonPuseThumb2 from "./assets/thumbnails/project/Neon_Pulse/Neon_Pulse_Th
 import NeonPuseThumb3 from "./assets/thumbnails/project/Neon_Pulse/Neon_Pulse_Thumbnail_3.png";
 import NeonPuseVideo from "./assets/thumbnails/project/Neon_Pulse/Neon_Pulse_Thumbnail_4.mp4";
 import SpaceAdventureThumb from "./assets/thumbnails/project/SpaceAdventure/SpaceAdventure_Thumbnail_1.png";
+import SpaceAdventureVideo from "./assets/thumbnails/project/SpaceAdventure/SpaceAdventure_Thumbnail_2.mp4";
 
 // Unreal Engine games
 import BiogenThumb from "./assets/thumbnails/project/Biogen/Biogen_Thumbnail_1.png";
 import IndianaThumb from "./assets/thumbnails/project/Indiana/Indiana_Thumbnail_1.png";
 import SpeedyBurgerThumb from "./assets/thumbnails/project/SpeedyBurger/SpeedyBurger_Thumbnail_1.png";
+import SpeedyBurgerThumb2 from "./assets/thumbnails/project/SpeedyBurger/SpeedyBurger_Thumbnail_2.jpg";
 
 // Game Jam games
 import BubblePopThumb from "./assets/thumbnails/gamejam/Bubble_Pop/Bubble_Pop_Thumbnail_1.png";
+import BubblePopThumb2 from "./assets/thumbnails/gamejam/Bubble_Pop/Bubble_Pop_Thumbnail_2.png";
+import BubblePopThumb3 from "./assets/thumbnails/gamejam/Bubble_Pop/Bubble_Pop_Thumbnail_3.png";
+import BubblePopThumb4 from "./assets/thumbnails/gamejam/Bubble_Pop/Bubble_Pop_Thumbnail_4.png";
 import TLifeThumb from "./assets/thumbnails/gamejam/TLife/TLife_Thumbnail_1.png";
+import TLifeThumb2 from "./assets/thumbnails/gamejam/TLife/TLife_Thumbnail_2.png";
+import TLifeThumb3 from "./assets/thumbnails/gamejam/TLife/TLife_Thumbnail_3.png";
+import TLifeThumb4 from "./assets/thumbnails/gamejam/TLife/TLife_Thumbnail_4.png";
 
 import { Button } from "./components/ui/button";
 import { motion, AnimatePresence } from "motion/react";
@@ -92,13 +100,8 @@ function App() {
       role: "Solo Developer",
       teamSize: "1",
       duration: "3 months",
-      screenshots: [
-        "https://images.unsplash.com/photo-1614732414444-096e5f1122d5?w=800&auto=format&fit=crop",
-        "https://images.unsplash.com/photo-1542751371-adc38448a05e?w=800&auto=format&fit=crop",
-      ],
-      videos: [
-        "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4",
-      ],
+      screenshots: [],
+      videos: [SpaceAdventureVideo],
     },
     {
       title: "Neon Pulse",
@@ -157,9 +160,7 @@ function App() {
       role: "Gameplay Programmer",
       teamSize: "4",
       duration: "4 months",
-      screenshots: [
-        "https://images.unsplash.com/photo-1561758033-d89a9ad46330?w=800&auto=format&fit=crop",
-      ],
+      screenshots: [SpeedyBurgerThumb2],
       videos: [
         "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4",
       ],
@@ -186,10 +187,7 @@ function App() {
       role: "Game Developer",
       teamSize: "3",
       duration: "2 months",
-      screenshots: [
-        "https://images.unsplash.com/photo-1663997605629-60d3d25a618c?w=800&auto=format&fit=crop",
-        "https://images.unsplash.com/photo-1609137144813-7d9921338f24?w=800&auto=format&fit=crop",
-      ],
+      screenshots: [],
     },
     {
       title: "Biogen",
@@ -239,6 +237,7 @@ function App() {
       technologies: ["Blueprint", "AI Behavior"],
       engine: "Unreal Engine 5",
       demoLink: "https://globalgamejam.org/games/2025/bubble-pop-5-0",
+      screenshots: [BubblePopThumb2, BubblePopThumb3, BubblePopThumb4],
     },
     {
       title: "T-Life",
@@ -261,6 +260,7 @@ function App() {
       role: "Developer & Animator",
       teamSize: "3",
       duration: "48 hours",
+      screenshots: [TLifeThumb2, TLifeThumb3, TLifeThumb4],
     },
   ];
 
