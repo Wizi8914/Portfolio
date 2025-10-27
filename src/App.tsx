@@ -43,20 +43,40 @@ import NeonPuseThumb from "./assets/thumbnails/project/Neon_Pulse/Neon_Pulse_Thu
 import NeonPuseThumb2 from "./assets/thumbnails/project/Neon_Pulse/Neon_Pulse_Thumbnail_2.png";
 import NeonPuseThumb3 from "./assets/thumbnails/project/Neon_Pulse/Neon_Pulse_Thumbnail_3.png";
 import NeonPuseVideo from "./assets/thumbnails/project/Neon_Pulse/Neon_Pulse_Thumbnail_4.mp4";
+
 import SpaceAdventureThumb from "./assets/thumbnails/project/SpaceAdventure/SpaceAdventure_Thumbnail_1.png";
-import SpaceAdventureVideo from "./assets/thumbnails/project/SpaceAdventure/SpaceAdventure_Thumbnail_2.mp4";
+import SpaceAdventureThumb2 from "./assets/thumbnails/project/SpaceAdventure/SpaceAdventure_Thumbnail_2.png";
+import SpaceAdventureThumb3 from "./assets/thumbnails/project/SpaceAdventure/SpaceAdventure_Thumbnail_3.png";
+import SpaceAdventureThumb4 from "./assets/thumbnails/project/SpaceAdventure/SpaceAdventure_Thumbnail_4.png";
+import SpaceAdventureThumb5 from "./assets/thumbnails/project/SpaceAdventure/SpaceAdventure_Thumbnail_5.png";
+import SpaceAdventureVideo from "./assets/thumbnails/project/SpaceAdventure/SpaceAdventure_Thumbnail_6.mp4";
 
 // Unreal Engine games
 import BiogenThumb from "./assets/thumbnails/project/Biogen/Biogen_Thumbnail_1.png";
+import BiogenThumb2 from "./assets/thumbnails/project/Biogen/Biogen_Thumbnail_2.png";
+import BiogenThumb3 from "./assets/thumbnails/project/Biogen/Biogen_Thumbnail_3.png";
+import BiogenThumb4 from "./assets/thumbnails/project/Biogen/Biogen_Thumbnail_4.png";
+
 import IndianaThumb from "./assets/thumbnails/project/Indiana/Indiana_Thumbnail_1.png";
+import IndianaThumb2 from "./assets/thumbnails/project/Indiana/Indiana_Thumbnail_2.png";
+import IndianaThumb3 from "./assets/thumbnails/project/Indiana/Indiana_Thumbnail_3.png";
+import IndianaVideo from "./assets/thumbnails/project/Indiana/Indiana_Thumbnail_4.mp4";
+
 import SpeedyBurgerThumb from "./assets/thumbnails/project/SpeedyBurger/SpeedyBurger_Thumbnail_1.png";
 import SpeedyBurgerThumb2 from "./assets/thumbnails/project/SpeedyBurger/SpeedyBurger_Thumbnail_2.jpg";
+import SpeedyBurgerThumb3 from "./assets/thumbnails/project/SpeedyBurger/SpeedyBurger_Thumbnail_3.png";
+import SpeedyBurgerThumb4 from "./assets/thumbnails/project/SpeedyBurger/SpeedyBurger_Thumbnail_4.png";
+import SpeedyBurgerThumb5 from "./assets/thumbnails/project/SpeedyBurger/SpeedyBurger_Thumbnail_5.png";
+import SpeedyBurgerThumb6 from "./assets/thumbnails/project/SpeedyBurger/SpeedyBurger_Thumbnail_6.png";
+import SpeedyBurgerThumb7 from "./assets/thumbnails/project/SpeedyBurger/SpeedyBurger_Thumbnail_7.png";
+import SpeedyBurgerThumb8 from "./assets/thumbnails/project/SpeedyBurger/SpeedyBurger_Thumbnail_8.png";
 
 // Game Jam games
 import BubblePopThumb from "./assets/thumbnails/gamejam/Bubble_Pop/Bubble_Pop_Thumbnail_1.png";
 import BubblePopThumb2 from "./assets/thumbnails/gamejam/Bubble_Pop/Bubble_Pop_Thumbnail_2.png";
 import BubblePopThumb3 from "./assets/thumbnails/gamejam/Bubble_Pop/Bubble_Pop_Thumbnail_3.png";
 import BubblePopThumb4 from "./assets/thumbnails/gamejam/Bubble_Pop/Bubble_Pop_Thumbnail_4.png";
+
 import TLifeThumb from "./assets/thumbnails/gamejam/TLife/TLife_Thumbnail_1.png";
 import TLifeThumb2 from "./assets/thumbnails/gamejam/TLife/TLife_Thumbnail_2.png";
 import TLifeThumb3 from "./assets/thumbnails/gamejam/TLife/TLife_Thumbnail_3.png";
@@ -83,51 +103,54 @@ function App() {
         "Unity",
         "AI Behavior",
         "State Machines",
-        "Cinemachine",
+        "Cinemachine"
       ],
       engine: "Unity",
       demoLink: "#",
       githubLink: "https://github.com/Wizi8914/UnityTPSGame",
-      fullDescription: "Space Adventure is an immersive third-person shooter that takes players on an epic journey through the cosmos. Navigate through hostile environments, engage in intense combat with AI-controlled enemies, and discover powerful weapons to aid your escape. The game features advanced AI behavior systems and smooth camera work powered by Cinemachine.",
+      fullDescription: "Space Adventure is a third-person shooter game. Navigate hostile environments, engage in combat with AI-controlled enemies, and discover powerful weapons to help you escape. The game features advanced AI behavioral systems.",
       features: [
         "Dynamic enemy AI with multiple behavior states",
         "Weapon system with multiple gun types",
         "Cinematic camera movements and transitions",
-        "Immersive space environments",
         "State machine-based character controller",
-        "Progressive difficulty system"
       ],
       role: "Solo Developer",
       teamSize: "1",
-      duration: "3 months",
-      screenshots: [],
+      duration: "1 month",
+      screenshots: [
+        SpaceAdventureThumb2,
+        SpaceAdventureThumb3,
+        SpaceAdventureThumb4,
+        SpaceAdventureThumb5,
+      ],
       videos: [SpaceAdventureVideo],
     },
     {
       title: "Neon Pulse",
       description:
-        "Neon Pulse is a mobile rhythm game where you control a car in a Synthwave universe. Several music tracks are available. ",
+        "Neon Pulse is a mobile rhythm game where you control a car in a Synthwave universe. Several music tracks are available. All elements of the game were created by the team within the allotted time.",
       image: NeonPuseThumb,
       technologies: [
         "C#",
         "Unity",
         "Engine Editing",
+        "Level Saving"
       ],
       engine: "Unity",
       demoLink: "#",
       githubLink: "https://github.com/Wizi8914/Neon-Pulse",
-      fullDescription: "Neon Pulse brings the vibrant aesthetics of Synthwave to mobile rhythm gaming. Drive through neon-lit highways while matching beats and avoiding obstacles. The game features custom engine modifications for optimal mobile performance and an engaging visual experience that captures the essence of retro-futuristic aesthetics.",
+      fullDescription: "Neon Pulse brings the vibrant aesthetics of Synthwave to mobile rhythm games. Drive down neon-lit highways while following the beat and avoiding obstacles. Get the highest score !",
       features: [
         "Multiple original Synthwave music tracks",
         "Responsive rhythm-based gameplay mechanics",
-        "Stunning neon visual effects",
-        "Mobile-optimized performance",
+        "Unique synthwave environment",
         "Progressive difficulty curve",
-        "Custom audio synchronization system"
+        "Audio synchronization system"
       ],
-      role: "Game Designer & Developer",
-      teamSize: "2",
-      duration: "2 months",
+      role: "Developer",
+      teamSize: "7",
+      duration: "4 days",
       screenshots: [NeonPuseThumb2, NeonPuseThumb3],
       videos: [
         NeonPuseVideo,
@@ -148,22 +171,26 @@ function App() {
       ],
       engine: "Unreal Engine 5",
       demoLink: "#",
-      fullDescription: "Speedy Burger is an innovative cooperative cooking game that uses custom-built physical controllers to create a unique arcade-style experience. Players must work together to prepare fast food orders accurately and quickly, managing ingredients and cooking stations while racing against the clock.",
+      fullDescription: "Speedy Burger is a cooperative game in which players prepare orders in a fast food restaurant. The game is played by two players using a custom controller representing all the available elements. Work together to get the best score and make it onto the leaderboard. ",
       features: [
         "Custom physical controller integration",
-        "Cooperative multiplayer gameplay",
+        "Cooperative gameplay",
         "Dynamic order generation system",
-        "Data-driven ingredient and recipe system",
         "Custom shader effects for food visuals",
         "Time-based scoring mechanism"
       ],
       role: "Gameplay Programmer",
-      teamSize: "4",
-      duration: "4 months",
-      screenshots: [SpeedyBurgerThumb2],
-      videos: [
-        "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4",
-      ],
+      teamSize: "9",
+      duration: "4 days",
+      screenshots: [
+        SpeedyBurgerThumb2,
+        SpeedyBurgerThumb3,
+        SpeedyBurgerThumb4,
+        SpeedyBurgerThumb5,
+        SpeedyBurgerThumb6,
+        SpeedyBurgerThumb7,
+        SpeedyBurgerThumb8,
+      ]
     },
     {
       title: "Temple escape",
@@ -172,22 +199,24 @@ function App() {
       technologies: [
         "Blueprint",
         "Local Multiplayer",
+        "Chunking",
+        "Level Streaming",
       ],
       engine: "Unreal Engine 5",
       demoLink: "#",
-      fullDescription: "Temple Escape is a fast-paced party game where up to 4 players compete in an Indiana Jones-inspired temple escape challenge. Navigate treacherous traps, solve quick puzzles, and race against your friends in this action-packed mini-game experience.",
+      fullDescription: "Temple Escape is a festive game where up to 4 players compete in an Indiana Jones-inspired temple escape challenge. Personalize your character with a Avoid treacherous traps, solve quick puzzles, and compete against your friends in this mini-game.",
       features: [
         "Up to 4 player local multiplayer",
         "Dynamic trap and hazard system",
-        "Competitive scoring system",
+        "Random chunks generation",
         "Indiana Jones-themed environment",
-        "Quick-match gameplay sessions",
-        "Blueprint-based game logic"
+        "Fully customizable character"
       ],
       role: "Game Developer",
-      teamSize: "3",
-      duration: "2 months",
-      screenshots: [],
+      teamSize: "7",
+      duration: "4 days",
+      screenshots: [IndianaThumb2, IndianaThumb3],
+      videos: [IndianaVideo],
     },
     {
       title: "Biogen",
@@ -199,18 +228,18 @@ function App() {
       ],
       engine: "Unreal Engine 5",
       demoLink: "#",
-      fullDescription: "Biogen showcases advanced UI/UX design in Unreal Engine 5, featuring a sophisticated HUD system and an interactive skill tree. This project demonstrates proficiency in creating complex user interfaces using UMG (Unreal Motion Graphics) and Widget Blueprints.",
+      fullDescription: "Biogen presents an advanced UI/UX design in Unreal Engine 5, featuring a HUD system and an interactive skill tree. This project demonstrates the creation of complex user interfaces using UMG (Unreal Motion Graphics) and Widget Blueprints.",
       features: [
         "Advanced HUD with real-time updates",
         "Interactive skill tree system",
         "Dynamic widget animations",
         "Custom UI components",
         "Data-driven progression system",
-        "Responsive interface design"
       ],
-      role: "UI/UX Developer",
-      teamSize: "2",
-      duration: "6 weeks",
+      role: "UI/UX Developer & Designer",
+      teamSize: "3",
+      duration: "2 months",
+      screenshots: [BiogenThumb2, BiogenThumb3, BiogenThumb4],
     },
   ];
 
@@ -222,17 +251,16 @@ function App() {
       description:
         "Created in 48 hours for the 2025 Global Game Jam. A horror game set in a bubble wrap factory. Your goal is to escape without getting caught by the monster. Be careful not to step on the bubble wrap!",
       image: BubblePopThumb,
-      fullDescription: "Bubble Pop is a tension-filled horror game created during the 48-hour Global Game Jam 2025. Set in an eerie bubble wrap factory, players must navigate through dark corridors while avoiding a terrifying monster. Every step must be carefully planned - stepping on bubble wrap will alert the monster to your location. The game combines stealth mechanics with environmental awareness in a unique and suspenseful experience.",
+      fullDescription: "Bubble Pop is a horror game created during Global Game Jam 2025, a 48-hour event. In a bubble wrap factory, the player must navigate their way through dark corridors while avoiding a terrifying monster. Every step must be carefully planned, as walking on bubble wrap will alert the monster to your presence.",
       features: [
         "Stealth-based horror gameplay",
         "Audio-reactive AI enemy",
         "Environmental hazard mechanics",
         "Atmospheric factory setting",
         "Tension-building sound design",
-        "Created in 48 hours"
       ],
       role: "Game Designer & Programmer",
-      teamSize: "4",
+      teamSize: "7",
       duration: "48 hours",
       technologies: ["Blueprint", "AI Behavior"],
       engine: "Unreal Engine 5",
@@ -248,17 +276,14 @@ function App() {
       engine: "Unity",
       demoLink: "https://globalgamejam.org/games/2024/t-life-4",
       githubLink: "https://github.com/Wizi8914/TLife",
-      fullDescription: "T-Life is a charming and humorous 2D game created during the 2024 Global Game Jam. Players help Gilbert, a loveable T-Rex, navigate daily life despite the challenges posed by his characteristically short arms. The game combines puzzle-solving with physics-based mechanics to create entertaining scenarios that highlight Gilbert's struggle with everyday tasks.",
+      fullDescription: "T-Life is a game about Gilbert, our friend T-Rex, who is trying to integrate into his new life among humans. Our goal is to help him accomplish everyday tasks that are difficult for him due to his small arms. Find the objects and think about possible combinations to help Gilbert!",
       features: [
-        "Physics-based puzzle mechanics",
-        "Charming 2D character animations",
         "Multiple everyday task challenges",
         "Humorous T-Rex character design",
         "Creative problem-solving gameplay",
-        "Made in 48 hours"
       ],
-      role: "Developer & Animator",
-      teamSize: "3",
+      role: "Developer",
+      teamSize: "4",
       duration: "48 hours",
       screenshots: [TLifeThumb2, TLifeThumb3, TLifeThumb4],
     },
@@ -303,26 +328,12 @@ function App() {
                   <motion.h1
                     className="text-5xl md:text-6xl lg:text-7xl mb-4"
                     initial={{ opacity: 0, y: 30 }}
-                    animate={{ 
-                      opacity: 1, 
-                      y: 0,
-                      textShadow: [
-                        "0 0 30px rgba(168, 85, 247, 0.6)",
-                        "0 0 40px rgba(192, 38, 211, 0.8)",
-                        "0 0 30px rgba(168, 85, 247, 0.6)",
-                      ],
-                    }}
+                    animate={{ opacity: 1, y: 0 }}
                     transition={{
                       opacity: { duration: 0.5, ease: "easeOut" },
                       y: { duration: 0.5, ease: "easeOut" },
-                      textShadow: {
-                        duration: 1.8,
-                        repeat: Infinity,
-                        ease: "easeInOut",
-                        repeatType: "reverse",
-                        delay: 0.6
-                      }
                     }}
+                    style={{ textShadow: 'none' }}
                   >
                     {"Loïck Konieczny".split("").map((char, index) => (
                       <motion.span

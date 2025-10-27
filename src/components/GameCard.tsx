@@ -195,7 +195,7 @@ export function GameCard({
     <Dialog open={isDialogOpen} onOpenChange={setIsDialogOpen}>
       <DialogContent className="max-w-[95vw] w-[95vw] max-h-[90vh] overflow-y-auto border-primary/30 shadow-2xl shadow-primary/10">
         <DialogHeader>
-          <div className="flex items-start justify-between gap-4 pr-8">
+          <div className="flex items-start justify-between gap-4">
             <div className="flex-1">
               <DialogTitle className="text-3xl mb-2 glow-text">{title}</DialogTitle>
               <DialogDescription className="text-base">
