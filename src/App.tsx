@@ -326,7 +326,7 @@ function App() {
                     transition={{ duration: 0.3 }}
                 >
                   <motion.h1
-                    className="text-5xl md:text-6xl lg:text-7xl mb-4"
+                    className="hero-name text-5xl md:text-6xl lg:text-7xl mb-4"
                     initial={{ opacity: 0, y: 30 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{

@@ -316,3 +316,13 @@ label[for] {
     width: auto !important;
   }
 }
+
+/* Reduce hero name size on very small devices (<370px) to avoid overflow */
+@media (max-width: 370px) {
+  .hero-name {
+    /* text-5xl -> text-4xl on very small screens */
+    font-size: 2.5rem !important; /* 36px */
+    line-height: 1.05 !important;
+    letter-spacing: -0.01em;
+  }
+}
