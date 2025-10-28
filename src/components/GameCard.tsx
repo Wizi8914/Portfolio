@@ -378,7 +378,9 @@ export function GameCard({
                   key={tech}
                   initial={{ opacity: 0, scale: 0.8 }}
                   animate={{ opacity: 1, scale: 1 }}
-                  transition={{ delay: index * 0.05 }}
+                  whileHover={{ scale: 1.06 }}
+                  whileTap={{ scale: 0.985 }}
+                  transition={{ duration: 0.15 }}
                 >
                   <Badge variant="outline" className="px-3 py-1">
                     {tech}
