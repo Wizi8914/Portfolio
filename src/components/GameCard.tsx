@@ -352,16 +352,13 @@ export function GameCard({
               <h3 className="text-lg">Key Features</h3>
               <ul className="grid grid-cols-1 md:grid-cols-2 gap-2">
                 {features.map((feature, index) => (
-                  <motion.li
+                  <li
                     key={index}
-                    initial={{ opacity: 0, x: -20 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    transition={{ delay: index * 0.05 }}
                     className="flex items-start gap-2 text-muted-foreground"
                   >
                     <span className="text-primary mt-1">▸</span>
                     <span>{feature}</span>
-                  </motion.li>
+                  </li>
                 ))}
               </ul>
             </div>
