@@ -470,8 +470,9 @@ function App() {
                     viewport={{ once: true }}
                     transition={{ duration: 0.36, ease: "easeOut" }}
                   >
-                    <TabsList className="flex w-full max-w-3xl gap-2 p-1.5 justify-center">
+                    <TabsList className="flex flex-col sm:flex-row w-full max-w-3xl gap-2 p-1.5 justify-center">
                       <TabsTrigger
+                        className="w-full sm:w-auto"
                         value="all"
                         onClick={() => setShowAllGames(true)}
                       >
@@ -481,6 +482,7 @@ function App() {
                         </div>
                       </TabsTrigger>
                       <TabsTrigger
+                        className="w-full sm:w-auto"
                         value="unity"
                         onClick={() => setShowAllGames(false)}
                       >
@@ -490,6 +492,7 @@ function App() {
                         </div>
                       </TabsTrigger>
                       <TabsTrigger
+                        className="w-full sm:w-auto"
                         value="unreal"
                         onClick={() => setShowAllGames(false)}
                       >

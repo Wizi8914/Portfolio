@@ -290,21 +290,29 @@ label[for] {
 
 /* Make sure selection and scrollbars also look good in dark mode by relying on CSS vars */
 
-/* --- Project description min-width overrides --- */
-/* Make project descriptions much wider across breakpoints */
+/* --- Dialog responsive overrides --- */
+/* Prevent forcing a large min-width on small devices which causes horizontal overflow. */
 [data-slot="dialog-content"] {
-  min-width: 500px !important; /* mobile baseline increased */
+  /* allow the dialog to shrink on mobile and use viewport width as maximum */
+  min-width: 0 !important;
+  width: 95vw !important;
+  max-width: 1200px !important;
 }
 
-
-@media (min-width: 1100px) {
+@media (min-width: 640px) {
+  /* small tablets and up: allow a comfortable minimum width while still respecting viewport */
   [data-slot="dialog-content"] {
-    min-width: 750px !important; /* tablet / small desktop */
+    min-width: 500px !important;
+    width: auto !important;
+    max-width: 90vw !important;
   }
 }
 
 @media (min-width: 1400px) {
+  /* large desktops can have a larger minimum */
   [data-slot="dialog-content"] {
-    min-width: 1400px !important; /* very large desktop */
+    min-width: 1200px !important;
+    max-width: none !important;
+    width: auto !important;
   }
 }

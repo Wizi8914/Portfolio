@@ -86,7 +86,7 @@ export function GameCard({
         className="cursor-pointer"
       >
         <Card
-          className={`overflow-hidden flex flex-col h-full transition-all duration-300 cursor-pointer ${isHovered ? "border-glow" : ""}`}
+          className={`overflow-hidden flex flex-col h-full transition-all duration-300 cursor-pointer min-w-0 ${isHovered ? "border-glow" : ""}`}
         >
         <div className="aspect-video w-full overflow-hidden relative">
           <motion.div
@@ -130,7 +130,7 @@ export function GameCard({
               {engine}
             </Badge>
           </div>
-          <CardDescription>{description}</CardDescription>
+          <CardDescription className="min-w-0 break-words">{description}</CardDescription>
         </CardHeader>
         <CardContent className="flex-1">
           <div className="flex flex-wrap gap-2">
@@ -198,7 +198,7 @@ export function GameCard({
           <div className="flex items-start justify-between gap-4">
             <div className="flex-1">
               <DialogTitle className="text-3xl mb-2 glow-text">{title}</DialogTitle>
-              <DialogDescription className="text-base">
+              <DialogDescription className="text-base min-w-0 break-words">
                 {description}
               </DialogDescription>
             </div>
@@ -290,9 +290,6 @@ export function GameCard({
                     />
                   ))}
                 </div>
-                <p className="text-xs text-muted-foreground sm:hidden">
-                  👆 Swipe to navigate
-                </p>
               </div>
             </div>
           ) : (
