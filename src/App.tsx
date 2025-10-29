@@ -378,7 +378,7 @@ function App() {
                         delay: 0.9
                       }}
                     >
-                      Game Developer
+                      Game Developer Student
                     </motion.span>
                   </motion.div>
                 </motion.div>
