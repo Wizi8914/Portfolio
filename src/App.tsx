@@ -86,6 +86,9 @@ import { Button } from "./components/ui/button";
 import { motion, AnimatePresence } from "motion/react";
 import { useState } from "react";
 
+const CV_EN = new URL("./assets/CV/CV-Loïck-Konieczny-(English).pdf", import.meta.url).href;
+const CV_FR = new URL("./assets/CV/CV-Loïck-Konieczny-(French).pdf", import.meta.url).href;
+
 function App() {
   const [showAllGames, setShowAllGames] = useState(true);
   const [isLoading, setIsLoading] = useState(true);
@@ -416,7 +419,7 @@ function App() {
                   onAnimationComplete={() => setTopDone(true)}
                 >
                   <Button size="lg" className="gap-2 cursor-pointer" asChild>
-                    <a href="/resume-en.pdf" download className="cursor-pointer">
+                    <a href={CV_EN} download className="cursor-pointer">
                       <Download className="w-5 h-5" />
                       CV (English)
                     </a>
@@ -427,7 +430,7 @@ function App() {
                     className="gap-2 cursor-pointer"
                     asChild
                   >
-                    <a href="/resume-fr.pdf" download className="cursor-pointer">
+                    <a href={CV_FR} download className="cursor-pointer">
                       <Download className="w-5 h-5" />
                       CV (Français)
                     </a>
