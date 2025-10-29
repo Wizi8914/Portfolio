@@ -400,7 +400,7 @@ function App() {
                   Student passionate about video game development, specializing in Unreal Engine and Unity. I love learning new things and creating engaging gaming experiences.
                 </motion.p>
 
-                {/* Resume buttons */}
+                {/* CV buttons */}
                 <motion.div
                   className="flex flex-wrap justify-center gap-4 pt-4"
                   initial={{ opacity: 0, y: 30 }}
@@ -418,7 +418,7 @@ function App() {
                   <Button size="lg" className="gap-2 cursor-pointer" asChild>
                     <a href="/resume-en.pdf" download className="cursor-pointer">
                       <Download className="w-5 h-5" />
-                      Resume (English)
+                      CV (English)
                     </a>
                   </Button>
                   <Button
