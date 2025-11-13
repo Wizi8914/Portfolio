@@ -32,7 +32,7 @@ import DiversionIcon from "./components/icons/DiversionIcon";
 import MongoIcon from "./components/icons/MongoIcon";
 import FirebaseIcon from "./components/icons/FirebaseIcon";
 import HoudiniIcon from "./components/icons/HoudiniIcon";
-import ClionIcon from "./components/icons/ClionIcon";
+import RiderIcon from "./components/icons/RiderIcon";
 import Max3DIcon from "./components/icons/Max3DIcon";
 import JavaIcon from "./components/icons/JavaIcon";
 
@@ -645,9 +645,9 @@ function App() {
                         url: "https://visualstudio.microsoft.com",
                       },
                       {
-                        name: "CLion",
-                        icon: ClionIcon,
-                        url: "https://www.jetbrains.com/clion/",
+                        name: "Rider",
+                        icon: RiderIcon,
+                        url: "https://www.jetbrains.com/rider/",
                       },
                     ].map((item, index) => (
                       <motion.a
