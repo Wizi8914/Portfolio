@@ -72,6 +72,12 @@ import SpeedyBurgerThumb7 from "./assets/thumbnails/project/SpeedyBurger/SpeedyB
 import SpeedyBurgerThumb8 from "./assets/thumbnails/project/SpeedyBurger/SpeedyBurger_Thumbnail_8.png";
 
 // Game Jam games
+import LeVisageDesMortsThumb from "./assets/thumbnails/gamejam/LeVisageDesMorts/LeVisageDesMorts_Thumbnail_1.png";
+import LeVisageDesMortsThumb2 from "./assets/thumbnails/gamejam/LeVisageDesMorts/LeVisageDesMorts_Thumbnail_2.png";
+import LeVisageDesMortsThumb3 from "./assets/thumbnails/gamejam/LeVisageDesMorts/LeVisageDesMorts_Thumbnail_3.png";
+import LeVisageDesMortsThumb4 from "./assets/thumbnails/gamejam/LeVisageDesMorts/LeVisageDesMorts_Thumbnail_4.png";
+import LeVisageDesMortsVideo from "./assets/thumbnails/gamejam/LeVisageDesMorts/LeVisageDesMorts_Thumbnail_5.mp4";
+
 import BubblePopThumb from "./assets/thumbnails/gamejam/Bubble_Pop/Bubble_Pop_Thumbnail_1.png";
 import BubblePopThumb2 from "./assets/thumbnails/gamejam/Bubble_Pop/Bubble_Pop_Thumbnail_2.png";
 import BubblePopThumb3 from "./assets/thumbnails/gamejam/Bubble_Pop/Bubble_Pop_Thumbnail_3.png";
@@ -249,6 +255,27 @@ function App() {
   // Godot projects removed per request
 
   const gameJamGames: GameCardProps[] = [
+    {
+      title: "Le Visage des morts",
+      description:
+        "Created in 48 hours for Global Game Jam 2026. A narrative mystery game where you explore a grieving home. Use a mystical death mask to step back in time, uncover hidden secrets, and reveal the truth behind your grandfather’s passing.",
+      image: LeVisageDesMortsThumb,
+      fullDescription: "Le Visage des morts is a narrative mystery game created during Global Game Jam 2026, a 48-hour event. A narrative puzzle game based on a core mechanic: putting on and taking off a grandfather's death mask to switch between the present and the past.",
+      features: [
+        "Time-shifting mask mechanics",
+        "Environmental storytelling",
+        "Immersive old house environment",
+        "Puzzle-solving based on past and present interactions",
+      ],
+      role: "Game Designer & Programmer",
+      teamSize: "5",
+      duration: "48 hours",
+      technologies: ["Blueprint", "Puzzle", "Post Process"],
+      engine: "Unreal Engine 5",
+      demoLink: "https://globalgamejam.org/games/2026/le-visage-des-morts-6",
+      screenshots: [LeVisageDesMortsThumb2, LeVisageDesMortsThumb3, LeVisageDesMortsThumb4],
+      videos: [LeVisageDesMortsVideo],
+    },
     {
       title: "Bubble Pop",
       description:
@@ -964,7 +991,7 @@ function App() {
                     {
                       icon: Linkedin,
                       label: "LinkedIn",
-                      href: "https://www.linkedin.com/in/loïck-konieczny-720594291",
+                      href: "https://www.linkedin.com/in/loïck-konieczny",
                     },
                   ].map((item, index) => (
                     <motion.div
