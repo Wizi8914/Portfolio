@@ -93,7 +93,7 @@ import { motion, AnimatePresence } from "motion/react";
 import { useState } from "react";
 
 const CV_EN = new URL("./assets/CV/CV-Loïck-Konieczny-(English).pdf", import.meta.url).href;
-const CV_FR = new URL("./assets/CV/CV-Loïck-Konieczny-(French).pdf", import.meta.url).href;
+const CV_FR = new URL("./assets/CV/CV-Loïck-Konieczny-(Français).pdf", import.meta.url).href;
 
 function App() {
   const [showAllGames, setShowAllGames] = useState(true);
